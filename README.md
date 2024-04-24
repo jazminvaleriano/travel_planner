@@ -35,7 +35,7 @@ code blocks for commands
 
 * Merlyne Lawrence 
 * Kamdoum Kemfio Hans
-* Assadeck Moussa 
+* Assadeck Moussa Aitock
 * Jazmin Valeriano [@jazminvaleriano](https://github.com/jazminvaleriano)
 
 
