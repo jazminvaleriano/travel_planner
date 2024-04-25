@@ -35,7 +35,7 @@ code blocks for commands
 
 * Merlyne Lawrence 
 * Kamdoum Kemfio Hans
-* Assadeck Moussa Aitock
+* Assadeck Moussa Aitock [@MerNLP](https://github.com/MerNLP)
 * Jazmin Valeriano [@jazminvaleriano](https://github.com/jazminvaleriano)
 
 ## Roadmap
