@@ -33,9 +33,9 @@ code blocks for commands
 ```
 ## Contributors
 
-* Merlyne Lawrence 
+* Merlyne Lawrence [@MerNLP](https://github.com/MerNLP)
 * Kamdoum Kemfio Hans
-* Assadeck Moussa Aitock [@MerNLP](https://github.com/MerNLP)
+* Assadeck Moussa Aitock 
 * Jazmin Valeriano [@jazminvaleriano](https://github.com/jazminvaleriano)
 
 ## Roadmap
