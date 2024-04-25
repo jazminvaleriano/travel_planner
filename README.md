@@ -38,6 +38,9 @@ code blocks for commands
 * Assadeck Moussa Aitock
 * Jazmin Valeriano [@jazminvaleriano](https://github.com/jazminvaleriano)
 
+## Roadmap
+
+If you want to be part of the project as contributor and find out more about the current status, check out ROADMAP.md
 
 ## License
 
