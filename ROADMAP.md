@@ -34,7 +34,9 @@ Share feedback and suggestions for improving the TripTrek experience based on yo
 - Tasks: 
     - Create a project repository on GitHub.
     - Define the project structure.
-    - Begin developing core functions. Itineraries are customizable, and top-rated tourist sites are retrieved.
+    - Begin developing core functions:
+        - Itineraries are customizable (User inputs are stored)
+        - top-rated tourist sites are retrieved.
 
 ### Second Deliverable + Classes + Refactoring.
 - Deadline: May 16 

@@ -1,0 +1,11 @@
+name,city,rating,num_reviews,location,price_range
+Eiffel Tower,Paris,4.5,10000,"{'latitude': 48.8584, 'longitude': 2.2945}",$$ - $$$
+Louvre Museum,Paris,4.8,19000,"{'latitude': 48.8606, 'longitude': 2.3376}",$$
+Notre-Dame Cathedral,Paris,4.7,15000,"{'latitude': 48.853, 'longitude': 2.3498}",$
+Montmartre,Paris,4.6,12000,"{'latitude': 48.8867, 'longitude': 2.3431}",$
+Seine River Cruise,Paris,4.8,17000,"{'latitude': 48.8584, 'longitude': 2.3526}",$$
+Musée d'Orsay,Paris,4.7,14000,"{'latitude': 48.8606, 'longitude': 2.3264}",$$
+Sainte-Chapelle,Paris,4.7,16000,"{'latitude': 48.8556, 'longitude': 2.3458}",$
+Palace of Versailles,Paris,4.6,13000,"{'latitude': 48.8049, 'longitude': 2.1204}",$$ - $$$
+Centre Pompidou,Paris,4.5,11000,"{'latitude': 48.8606, 'longitude': 2.3522}",$$
+Luxembourg Gardens,Paris,4.7,18000,"{'latitude': 48.8462, 'longitude': 2.3372}",$
