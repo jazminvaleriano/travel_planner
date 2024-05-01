@@ -3,11 +3,14 @@
 Welcome to the TripTrek project! This repository houses a simple tool designed to simplify travel planning by automating the generation of optimal itineraries for your favorite destination. Whether you're a seasoned traveler or embarking on your first adventure, *TripTrek* will help you make the most of your trip.
 
 ## Features
-* **Customizable Itineraries**: Users can specify their destination city, travel preferences and schedule. TripTrek Itinerary Generator will organize your activities efficiently, maximizing your time and enjoyment.
-* **Retrieve Top-Rated Touristic Sites**: TripTrek will fetch the top-rated tourist attractions in your selected area, and prioritize them according to the duration of your trip. This ensures that your itinerary includes must-see landmarks and experiences.
-* **Generate Daily Routes**: Say goodbye to the hassle of planning routes between attractions. Our tool automatically generates daily routes, based on distance starting from your initial location (such as your hotel), ensuring a smooth and enjoyable travel experience.
-* *Long range goal* **Public Transportation Integration**: For those who prefer public transportation, the Itinerary Generator offers the option to retrieve and incorporate public transportation routes between points of interest.
-  
+* **Customizable Itineraries**: Users can specify their destination city, travel preferences and schedule. TripTrek Itinerary Generator will organize your activities efficiently, _and estimate your trip costs (potentially)_, maximizing your time and enjoyment.
+* **Budget Management**: You can use TripTrek to keep track of your trip expenses (such as accommodation costs, transportation, meals, and activities), and stay within budget. 
+* **Data visualization and Trip Analysis**: Provide users with visualizations of their trip data, such as a timeline of planned activities or a breakdown of expenses by category. Allow users to analyze their travel patterns and budget usage to optimize future trips.  
+
+_Features to be added only if time allows:_
+**Generate Daily Routes and Estimated Budget**: Say goodbye to the hassle of planning routes between attractions. Our tool automatically generates daily routes, based on distance starting from your initial location (such as your hotel), ensuring a smooth and enjoyable travel experience.
+**Retrieve Top-Rated Touristic Sites**: TripTrek will fetch the top-rated tourist attractions in your selected area, and prioritize them according to the duration of your trip. This ensures that your itinerary includes must-see landmarks and experiences.
+
 ## Getting Started
 
 ### Dependencies
