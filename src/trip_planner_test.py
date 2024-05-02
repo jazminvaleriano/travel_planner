@@ -15,9 +15,10 @@ def test_trip_planner():
 
     # Test selecting attractions
     city = "Paris"  # Example city
+    stay_days = 3
     attractions = planner.get_attractions_for_city(city)
+    print("\nFiltered Attractions for", city)
     print(attractions)
-    stay_days = 5  # Example stay duration
     selected_attractions = planner.select_attractions(attractions, stay_days)
     print("\nSelected Attractions for", city, "for", stay_days, "days:")
     print(selected_attractions)

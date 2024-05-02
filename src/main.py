@@ -24,7 +24,16 @@ def main():
         choice = input("Enter your choice: ")
         
         if choice == '1':
+            # Plan trip
             trip_planner.plan_trip()
+            # Generate and display itinerary
+            itinerary = trip_planner.generate_itinerary()
+    
+            # Save itinerary to CSV
+            itinerary.to_csv("itinerary.csv", index=False)
+    
+            print("Itinerary saved to 'itinerary.csv'")
+            
         elif choice == '2':
             budget_manager.manage_budget()
         elif choice == '3':

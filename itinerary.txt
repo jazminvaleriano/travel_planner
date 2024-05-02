@@ -1,5 +1,0 @@
-Trip Itinerary
---------------
-Destination: Rome
-Length of stay: 10
-Cost: $382.50

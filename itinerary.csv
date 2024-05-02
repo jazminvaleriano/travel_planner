@@ -2,6 +2,4 @@ type,suggestion,location,price range,rating
 Attraction,Louvre Museum,"{'latitude': 48.8606, 'longitude': 2.3376}",$$,4.8
 Attraction,Seine River Cruise,"{'latitude': 48.8584, 'longitude': 2.3526}",$$,4.8
 Attraction,Luxembourg Gardens,"{'latitude': 48.8462, 'longitude': 2.3372}",$,4.7
-Restaurant,Alain Ducasse at Plaza Athénée,"{'latitude': 48.8671, 'longitude': 2.3037}",$$$$,4.9
-Restaurant,L'Astrance,"{'latitude': 48.8555, 'longitude': 2.3156}",$$$$,4.9
-Restaurant,Guy Savoy,"{'latitude': 48.8639, 'longitude': 2.3471}",$$$$,4.8
+Attraction,Sainte-Chapelle,"{'latitude': 48.8556, 'longitude': 2.3458}",$,4.7

@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 # Load touristic cities data
 world_cities = pd.read_csv("data/worldcities.csv")
@@ -76,8 +77,8 @@ class TripPlanner:
         trip_days = np.arange(1, 2 * stay_days + 1, step=2)
         
         # Add trip day column
-        selected_attractions['trip_day'] = np.tile(trip_days, stay_days)[:len(selected_attractions)]
-        
+        #selected_attractions['trip_day'] = trip_days
+
         return selected_attractions
     
     def get_restaurants_for_city(self, city, budget_range):
@@ -103,7 +104,7 @@ class TripPlanner:
         trip_days = np.arange(1, 2 * stay_days + 1, step=2)
         
         # Add trip day column
-        selected_restaurants['trip_day'] = np.tile(trip_days, stay_days)[:len(selected_restaurants)]
+        #selected_restaurants['trip_day'] = trip_days
         
         return selected_restaurants
     
@@ -130,7 +131,7 @@ class TripPlanner:
         # Save itinerary to a CSV file
         itinerary_file_name = "itinerary.csv"
         suggested_itinerary_df.to_csv(itinerary_file_name, index=False)
-        print(f"Saved itinerary to {itinerary_file_name}")
+        print(f"\nSaved itinerary to {itinerary_file_name}")
 
         # Print itinerary to the screen
         print("\nItinerary:")
