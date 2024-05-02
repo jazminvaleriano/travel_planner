@@ -7,6 +7,8 @@ class TripPlanner:
     def __init__(self):
         self.trip_details = pd.DataFrame(columns=["destination", "stay_days", "transportation", "budget_range", "activities"])
         self.attractions_data = pd.read_csv("data/attractions.csv")  # Load attractions data
+        self.restaurants_data = pd.read_csv("data/restaurants.csv")  # Load restaurants data
+
 
 
     def plan_trip(self):
@@ -62,7 +64,7 @@ class TripPlanner:
         return country
     
     def get_attractions_for_city(self, city):
-        attractions = self.attractions_data[self.attractions_data['city'] == city]['name']
+        attractions = self.attractions_data[self.attractions_data['city'] == city][:]
         return attractions
 
     def select_attractions(self, attractions, stay_days):
@@ -74,9 +76,18 @@ class TripPlanner:
         
         return selected_attractions
     
-    def get_restaurants_for_city(self, city):
-        restaurants = self.restaurants_data[self.restaurants_data['city'] == city]['name']
+    def get_restaurants_for_city(self, city, budget_range):
+        restaurants = self.restaurants_data[self.restaurants_data['city'] == city][:]
+        
+        # Filter restaurants based on budget_range
+        if budget_range == 'low':
+            restaurants = restaurants[restaurants['price_range'] == '$']
+        elif budget_range == 'med':
+            restaurants = restaurants[restaurants['price_range'].isin(['$', '$$'])]
+        # For high budget_range, no filtering needed!
+        
         return restaurants
+
 
     def select_restaurants(self, restaurants, stay_days):
         # Sort restaurants by rating and number of reviews
@@ -86,3 +97,26 @@ class TripPlanner:
         selected_restaurants = sorted_restaurants.head(3 * stay_days)
         
         return selected_restaurants
+    
+    def generate_itinerary(self):
+        suggestions = []
+        for index, trip_row in self.trip_details.iterrows():
+            destination_city = trip_row['destination']
+            stay_days = trip_row['stay_days']
+            budget_range = trip_row['budget_range']
+            
+            # Get attractions for the destination city
+            attractions = self.get_attractions_for_city(destination_city)
+            selected_attractions = self.select_attractions(attractions, stay_days)
+            for _, attraction in selected_attractions.iterrows():
+                suggestions.append(["Attraction", attraction['name'], destination_city, "", attraction['rating']])
+
+            # Get restaurants for the destination city based on budget range
+            restaurants = self.get_restaurants_for_city(destination_city, budget_range)
+            selected_restaurants = self.select_restaurants(restaurants, stay_days)
+            for _, restaurant in selected_restaurants.iterrows():
+                suggestions.append(["Restaurant", restaurant['name'], destination_city, restaurant['price_range'], restaurant['rating']])
+
+        suggested_itinerary_df = pd.DataFrame(suggestions, columns=["type", "suggestion", "location", "price range", "rating"])
+        return suggested_itinerary_df
+    
