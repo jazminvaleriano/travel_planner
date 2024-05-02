@@ -69,7 +69,20 @@ class TripPlanner:
         # Sort attractions by rating and number of reviews
         sorted_attractions = attractions.sort_values(by=["rating", "num_reviews"], ascending=False)
         
-        # Select top attractions based on stay duration
+        # Select 3 top attractions per day based on stay duration
         selected_attractions = sorted_attractions.head(3 * stay_days)
         
         return selected_attractions
+    
+    def get_restaurants_for_city(self, city):
+        restaurants = self.restaurants_data[self.restaurants_data['city'] == city]['name']
+        return restaurants
+
+    def select_restaurants(self, restaurants, stay_days):
+        # Sort restaurants by rating and number of reviews
+        sorted_restaurants = restaurants.sort_values(by=["rating", "num_reviews"], ascending=False)
+        
+        # Select 2 top restaurants per day based on stay duration
+        selected_restaurants = sorted_restaurants.head(3 * stay_days)
+        
+        return selected_restaurants
