@@ -22,5 +22,9 @@ def test_trip_planner():
     print("\nSelected Attractions for", city, "for", stay_days, "days:")
     print(selected_attractions)
 
+    # Get itinerary details 
+    planner.generate_itinerary()
+
+
 if __name__ == "__main__":
     test_trip_planner()

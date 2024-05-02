@@ -69,8 +69,14 @@ class TripPlanner:
         # Sort attractions by rating and number of reviews
         sorted_attractions = attractions.sort_values(by=["rating", "num_reviews"], ascending=False)
         
-        # Select 3 top attractions per day based on stay duration
-        selected_attractions = sorted_attractions.head(3 * stay_days)
+        # Select 2 top attractions per day based on stay duration
+        selected_attractions = sorted_attractions.head(2 * stay_days)
+        
+        # Create trip day series
+        trip_days = np.arange(1, 2 * stay_days + 1, step=2)
+        
+        # Add trip day column
+        selected_attractions['trip_day'] = np.tile(trip_days, stay_days)[:len(selected_attractions)]
         
         return selected_attractions
     
@@ -91,7 +97,13 @@ class TripPlanner:
         sorted_restaurants = restaurants.sort_values(by=["rating", "num_reviews"], ascending=False)
         
         # Select 2 top restaurants per day based on stay duration
-        selected_restaurants = sorted_restaurants.head(3 * stay_days)
+        selected_restaurants = sorted_restaurants.head(2 * stay_days)
+        
+        # Create trip day series
+        trip_days = np.arange(1, 2 * stay_days + 1, step=2)
+        
+        # Add trip day column
+        selected_restaurants['trip_day'] = np.tile(trip_days, stay_days)[:len(selected_restaurants)]
         
         return selected_restaurants
     
@@ -106,7 +118,7 @@ class TripPlanner:
         attractions = self.get_attractions_for_city(destination_city)
         selected_attractions = self.select_attractions(attractions, stay_days)
         for _, attraction in selected_attractions.iterrows():
-            suggestions.append(["Attraction", attraction['name'], attraction['location'], "", attraction['rating']])
+            suggestions.append(["Attraction", attraction['name'], attraction['location'], attraction['price_range'], attraction['rating']])
 
         # Get restaurants for the destination city based on budget range
         restaurants = self.get_restaurants_for_city(destination_city, budget_range)
@@ -115,5 +127,14 @@ class TripPlanner:
             suggestions.append(["Restaurant", restaurant['name'], restaurant['location'], restaurant['price_range'], restaurant['rating']])
 
         suggested_itinerary_df = pd.DataFrame(suggestions, columns=["type", "suggestion", "location", "price range", "rating"])
+        # Save itinerary to a CSV file
+        itinerary_file_name = "itinerary.csv"
+        suggested_itinerary_df.to_csv(itinerary_file_name, index=False)
+        print(f"Saved itinerary to {itinerary_file_name}")
+
+        # Print itinerary to the screen
+        print("\nItinerary:")
+        print(suggested_itinerary_df.to_string(index=False))
+
         return suggested_itinerary_df
    

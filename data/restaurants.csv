@@ -1,0 +1,11 @@
+name,city,rating,num_reviews,location,price_range
+Le Bernardin,Paris,4.8,5000,"{'latitude': 48.8663, 'longitude': 2.3232}",$$$
+L'Astrance,Paris,4.9,6000,"{'latitude': 48.8555, 'longitude': 2.3156}",$$$$
+Le Jules Verne,Paris,4.7,4500,"{'latitude': 48.8583, 'longitude': 2.2939}",$$$
+Guy Savoy,Paris,4.8,5500,"{'latitude': 48.8639, 'longitude': 2.3471}",$$$$
+Alain Ducasse at Plaza Athénée,Paris,4.9,6500,"{'latitude': 48.8671, 'longitude': 2.3037}",$$$$
+Arpège,Paris,4.7,4800,"{'latitude': 48.8569, 'longitude': 2.3156}",$$$$
+Pierre Gagnaire,Paris,4.8,5200,"{'latitude': 48.8693, 'longitude': 2.3085}",$$$$
+Septime,Paris,4.6,4200,"{'latitude': 48.8523, 'longitude': 2.3783}",$$
+Le Cinq,Paris,4.7,4900,"{'latitude': 48.8708, 'longitude': 2.3036}",$$$
+L'Arpège,Paris,4.7,4600,"{'latitude': 48.8563, 'longitude': 2.3083}",$$$
