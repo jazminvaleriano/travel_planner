@@ -35,8 +35,8 @@ code blocks for usage examples
 ## Contributors
 
 * Merlyne Lawrence [@MerNLP](https://github.com/MerNLP)
-* Kamdoum Kemfio Hans
-* Assadeck Moussa Aitock 
+* Kamdoum Kemfio Hans [@MerNLP](https://github.com/MerNLP)
+* Assadeck Moussa Aitock [@kmaritinion](https://github.com/kmartinion)
 * Jazmin Valeriano [@jazminvaleriano](https://github.com/jazminvaleriano)
 
 ## Roadmap
