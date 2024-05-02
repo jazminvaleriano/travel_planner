@@ -1,9 +1,9 @@
 # TripTrek
 
-Welcome to the TripTrek project! This repository houses a simple tool designed to simplify travel planning by automating the generation of optimal itineraries for your favorite destination. Whether you're a seasoned traveler or embarking on your first adventure, *TripTrek* will help you make the most of your trip.
+Welcome to the TripTrek project! This repository contains a prototype tool designed to simplify travel planning by generating itineraries, creating a budget and tracking expenses for your next adventure. 
 
 ## Features
-* **Customizable Itineraries**: Users can specify their destination city, travel preferences and schedule. TripTrek Itinerary Generator will organize your activities efficiently, _and estimate your trip costs (potentially)_, maximizing your time and enjoyment.
+* **Customizable Itineraries**: Users can specify their destination city, travel preferences and schedule. TripTrek Itinerary Generator will organize your activities efficiently, and estimate your trip costs, maximizing your time and enjoyment.
 * **Budget Management**: You can use TripTrek to keep track of your trip expenses (such as accommodation costs, transportation, meals, and activities), and stay within budget. 
 * **Data visualization and Trip Analysis**: Provide users with visualizations of their trip data, such as a timeline of planned activities or a breakdown of expenses by category. Allow users to analyze their travel patterns and budget usage to optimize future trips.  
 
@@ -20,8 +20,8 @@ _Features to be added only if time allows:_
 * Libraries (to be determined)
 
 ### Usage
-* 1. Clone the repository 
-* 2. Download and install required libs and data:
+1. Clone the repository 
+2. Download and install required libs and data:
 ```bash
 pip install requirements.txt
 ```
