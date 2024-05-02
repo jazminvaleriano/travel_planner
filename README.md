@@ -8,8 +8,9 @@ Welcome to the TripTrek project! This repository houses a simple tool designed t
 * **Data visualization and Trip Analysis**: Provide users with visualizations of their trip data, such as a timeline of planned activities or a breakdown of expenses by category. Allow users to analyze their travel patterns and budget usage to optimize future trips.  
 
 _Features to be added only if time allows:_
-**Generate Daily Routes and Estimated Budget**: Say goodbye to the hassle of planning routes between attractions. Our tool automatically generates daily routes, based on distance starting from your initial location (such as your hotel), ensuring a smooth and enjoyable travel experience.
-**Retrieve Top-Rated Touristic Sites**: TripTrek will fetch the top-rated tourist attractions in your selected area, and prioritize them according to the duration of your trip. This ensures that your itinerary includes must-see landmarks and experiences.
+
+# **Generate Daily Routes and Estimated Budget**: Say goodbye to the hassle of planning routes between attractions. Our tool automatically generates daily routes, based on distance starting from your initial location (such as your hotel), ensuring a smooth and enjoyable travel experience.
+# **Retrieve Top-Rated Touristic Sites**: TripTrek will fetch the top-rated tourist attractions in your selected area, and prioritize them according to the duration of your trip. This ensures that your itinerary includes must-see landmarks and experiences.
 
 ## Getting Started
 
@@ -18,21 +19,18 @@ _Features to be added only if time allows:_
 * Python 3.7
 * Libraries (to be determined)
 
-### Installing
-Download and install required libs and data:
-```bash
-pip install pandas
-pip install numpy
-
-```
-
 ### Usage
+* 1. Clone the repository 
+* 2. Download and install required libs and data:
+```bash
+pip install requirements.txt
+```
 *To be updated*
 * How to run the program
 * Step-by-step bullets
 * Usage examples
 ```
-code blocks for commands
+code blocks for usage examples
 ```
 ## Contributors
 
