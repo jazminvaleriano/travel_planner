@@ -1,5 +1,5 @@
 from trip_planner import TripPlanner
-#from budget_manager import BudgetManager
+from budget_manager import BudgetManager
 #from data_visualization import DataVisualizer
 
 def main():
