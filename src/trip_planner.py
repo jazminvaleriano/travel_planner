@@ -136,11 +136,7 @@ class TripPlanner:
         suggested_itinerary_df = pd.DataFrame(suggestions, columns=["type", "suggestion", "location", "price range", "rating","trip_day"])
         # Save itinerary to a CSV file
         suggested_itinerary_df.to_csv("itinerary.csv", index=False)
-        print(f"\nSaved itinerary to itinerary.csv")
-
-        # Print itinerary to the screen
-        print("\nItinerary:")
-        print(suggested_itinerary_df.to_string(index=False))
+        print(f"\nItinerary to itinerary.csv!")
 
         return suggested_itinerary_df
    

@@ -31,11 +31,7 @@ def main():
     
             # Save itinerary to CSV
             itinerary.to_csv("itinerary.csv", index=False)
-
-
-    
-            print("Itinerary saved to 'itinerary.csv'")
-            
+                
         elif choice == '2':
             budget_manager.manage_budget()
         elif choice == '3':
