@@ -1,97 +1,98 @@
-Country,Public Transportation Cost (USD)
-Switzerland,$304.52
-France,$268.23
-Liechtenstein,$266.77
-Iceland,$218.92
-Luxembourg,$211.54
-Denmark,$207.32
-Netherlands,$202.24
-Italy,$191.83
-Andorra,$189.39
-United Kingdom,$187.62
-Finland,$181.37
-Austria,$173.87
-Spain,$172.65
-Ireland,$164.83
-Belgium,$164.09
-Sweden,$148.84
-Slovakia,$146.23
-Turkey,$140.79
-Malta,$135.44
-Latvia,$130.78
-Portugal,$122.52
-Montenegro,$120.44
-Czech Republic,$119.25
-Estonia,$117.95
-Cyprus,$114.49
-Croatia,$109.16
-Slovenia,$107.73
-Lithuania,$106.34
-Romania,$88.70
-Albania,$86.22
-Bosnia and Herzegovina,$79.05
-Bulgaria,$74.15
-Belarus,$72.28
-Russia,$70.39
-Poland,$68.82
-Serbia,$42.05
-Georgia,$35.56
-Armenia,$31.60
-Ukraine,$26.53
-Azerbaijan,$0.00
-Maldives,$303.13
-Hong Kong,$173.58
-Singapore,$155.51
-Macao,$145.78
-Taiwan,$95.03
-Bhutan,$91.35
-Malaysia,$81.73
-Thailand,$80.94
-China,$79.27
-Philippines,$66.03
-Cambodia,$62.32
-Indonesia,$59.63
-Vietnam,$59.28
-Myanmar,$55.30
-Pakistan,$52.55
-Bangladesh,$51.85
-Sri Lanka,$51.60
-Nepal,$39.77
-India,$39.27
-Mongolia,$25.75
-Kazakhstan,$21.53
-Laos,$14.82
-United States of America,$284.40
-Canada,$172.56
-Mexico,$128.42
-Chile,$106.11
-Uruguay,$81.14
-Paraguay,$75.10
-Ecuador,$63.28
-Bolivia,$52.40
-Colombia,$45.37
-Argentina,$10.40
-Zambia,$945.11
-Seychelles,$201.80
-Senegal,$153.15
-Cape Verde,$140.71
-Swaziland (now Eswatini),$126.34
-Kenya,$119.37
-Uganda,$102.67
-Tanzania,$96.16
-South Africa,$89.32
-Madagascar,$85.08
-Namibia,$75.38
-Botswana,$60.62
-Lesotho,$60.02
-Ethiopia,$56.51
-Malawi,$36.67
-Mali,$32.87
-Burkina Faso,$30.53
-Ghana,$26.27
-Rwanda,$23.26
-Egypt,$16.67
-Mauritania,$0.00
-Mozambique,$0.00
-Zimbabwe,$0.00
-Australia,$31.00
+Country	Public Transportation Cost (USD)
+Switzerland	3.87
+Norway	3.82
+Netherlands	3.68
+Denmark	3.48
+Australia	3.32
+Germany	3.25
+Finland	3.25
+Sweden	3.25
+United Kingdom	3.03
+Belgium	2.71
+Austria	2.65
+Canada	2.57
+United States	2.5
+New Zealand	2.36
+Malta	2.17
+Ireland	2.17
+Cyprus	2.17
+Portugal	2.14
+Estonia	2.06
+France	1.95
+United Arab Emirates	1.91
+Italy	1.84
+South Africa	1.63
+Spain	1.62
+Latvia	1.62
+Croatia	1.58
+Hong Kong (China)	1.54
+Israel	1.49
+Singapore	1.48
+Japan	1.41
+Slovenia	1.41
+Czech Republic	1.31
+Greece	1.3
+Oman	1.3
+Uruguay	1.3
+Hungary	1.26
+Poland	1.12
+Bosnia And Herzegovina	1.1
+Palestine	1.09
+Slovakia	1.08
+Lithuania	1.08
+South Korea	1.07
+Saudi Arabia	1.07
+Kuwait	0.98
+Costa Rica	0.98
+Brazil	0.97
+Jamaica	0.96
+Bulgaria	0.89
+Mauritius	0.87
+Thailand	0.82
+Chile	0.82
+Kenya	0.77
+Colombia	0.75
+Jordan	0.71
+North Macedonia	0.7
+Taiwan	0.68
+Nigeria	0.66
+Romania	0.65
+Mexico	0.65
+Serbia	0.65
+Malaysia	0.64
+Qatar	0.55
+Peru	0.54
+Turkey	0.53
+Venezuela	0.5
+Panama	0.5
+Morocco	0.5
+Albania	0.43
+Bangladesh	0.43
+China	0.42
+Libya	0.41
+Russia	0.39
+Iraq	0.38
+Georgia	0.37
+India	0.36
+Ecuador	0.35
+Moldova	0.34
+Ukraine	0.33
+Indonesia	0.31
+Argentina	0.3
+Bolivia	0.29
+Vietnam	0.28
+Iran	0.27
+Philippines	0.26
+Belarus	0.26
+Armenia	0.26
+Tunisia	0.26
+Azerbaijan	0.24
+Kazakhstan	0.23
+Nepal	0.22
+Algeria	0.22
+Egypt	0.21
+Cuba	0.2
+Pakistan	0.18
+Sri Lanka	0.17
+Uzbekistan	0.13
+Luxembourg	0
