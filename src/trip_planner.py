@@ -1,12 +1,9 @@
 import pandas as pd
 import numpy as np
 
-# Load touristic cities data
-world_cities = pd.read_csv("data/worldcities.csv")
-
 class TripPlanner:
     def __init__(self):
-        self.trip_details = pd.DataFrame(columns=["destination", "stay_days", "transportation", "budget_range", "activities"])
+        self.trip_details = pd.DataFrame(columns=["destination_city","destination_country","stay_days", "transportation", "budget_range", "activities"])
         self.attractions_data = pd.read_csv("data/attractions.csv")  # Load attractions data
         self.restaurants_data = pd.read_csv("data/restaurants.csv")  # Load restaurants data
 
@@ -48,38 +45,43 @@ class TripPlanner:
             activities.append(activity)
         
         # Retrieve country from city
-        country = self.get_country(destination_city)
-        
-        trip_data = pd.DataFrame([[destination_city, stay_days, transportation, budget_range, activities]], 
-                                columns=["destination", "stay_days", "transportation", "budget_range", "activities"])
+        # Load touristic cities data
+        world_cities = pd.read_csv("data/worldcities.csv")
+        destination_country = world_cities.loc[world_cities['city'] == destination_city, 'country'].iloc[0]
+
+        trip_data = pd.DataFrame([[destination_city,destination_country, stay_days, transportation, budget_range, activities]], 
+                                columns=["destination_city","destination_country","stay_days", "transportation", "budget_range", "activities"])
         self.trip_details = trip_data
-        print("Trip details saved successfully!")
+        trip_data.to_csv("trip_details.csv", index=False)
+
+        print("\nTrip details saved successfully!")
 
     def get_trip_details(self):
         return self.trip_details
-    
-    def get_country(self, city):
-        country = world_cities.loc[world_cities['city'] == city, 'country'].iloc[0]
-        return country
-    
+        
     def get_attractions_for_city(self, city):
         attractions = self.attractions_data[self.attractions_data['city'] == city][:]
         return attractions
 
+
     def select_attractions(self, attractions, stay_days):
         # Sort attractions by rating and number of reviews
-        sorted_attractions = attractions.sort_values(by=["rating", "num_reviews"], ascending=False)
+        sorted_attractions = attractions.sort_values(by=["rating", "num_reviews"], ascending=False).copy()
         
         # Select 2 top attractions per day based on stay duration
-        selected_attractions = sorted_attractions.head(2 * stay_days)
+        selected_attractions = sorted_attractions.head(2 * stay_days).copy()
         
         # Create trip day series
-        trip_days = np.arange(1, 2 * stay_days + 1, step=2)
-        
+        trip_days = np.arange(1, stay_days + 1)  # Create an array from 1 to stay_days
+    
+        # Repeat the array to cover the required number of days
+        trip_days = np.tile(trip_days, 2)[:2 * stay_days]  # Repeat twice and truncate if necessary
+    
         # Add trip day column
-        #selected_attractions['trip_day'] = trip_days
+        selected_attractions['trip_day'] = trip_days
 
         return selected_attractions
+
     
     def get_restaurants_for_city(self, city, budget_range):
         restaurants = self.restaurants_data[self.restaurants_data['city'] == city][:]
@@ -98,20 +100,24 @@ class TripPlanner:
         sorted_restaurants = restaurants.sort_values(by=["rating", "num_reviews"], ascending=False)
         
         # Select 2 top restaurants per day based on stay duration
-        selected_restaurants = sorted_restaurants.head(2 * stay_days)
+        selected_restaurants = sorted_restaurants.head(2 * stay_days).copy()  # Make a copy
         
         # Create trip day series
-        trip_days = np.arange(1, 2 * stay_days + 1, step=2)
-        
+        trip_days = np.arange(1, stay_days + 1)  # Create an array from 1 to stay_days
+    
+        # Repeat the array to cover the required number of days
+        trip_days = np.tile(trip_days, 2)[:2 * stay_days]  # Repeat twice and truncate if necessary
+    
         # Add trip day column
-        #selected_restaurants['trip_day'] = trip_days
+        selected_restaurants['trip_day'] = trip_days
+
         
         return selected_restaurants
     
     def generate_itinerary(self):
         suggestions = []
         trip_row = self.trip_details.iloc[-1]  # Accessing the most recent trip details
-        destination_city = trip_row['destination']
+        destination_city = trip_row['destination_city']
         stay_days = trip_row['stay_days']
         budget_range = trip_row['budget_range']
         
@@ -119,19 +125,18 @@ class TripPlanner:
         attractions = self.get_attractions_for_city(destination_city)
         selected_attractions = self.select_attractions(attractions, stay_days)
         for _, attraction in selected_attractions.iterrows():
-            suggestions.append(["Attraction", attraction['name'], attraction['location'], attraction['price_range'], attraction['rating']])
+            suggestions.append(["Attraction", attraction['name'], attraction['location'], attraction['price_range'], attraction['rating'], attraction['trip_day']])
 
         # Get restaurants for the destination city based on budget range
         restaurants = self.get_restaurants_for_city(destination_city, budget_range)
         selected_restaurants = self.select_restaurants(restaurants, stay_days)
         for _, restaurant in selected_restaurants.iterrows():
-            suggestions.append(["Restaurant", restaurant['name'], restaurant['location'], restaurant['price_range'], restaurant['rating']])
+            suggestions.append(["Restaurant", restaurant['name'], restaurant['location'], restaurant['price_range'], restaurant['rating'], restaurant['trip_day']])
 
-        suggested_itinerary_df = pd.DataFrame(suggestions, columns=["type", "suggestion", "location", "price range", "rating"])
+        suggested_itinerary_df = pd.DataFrame(suggestions, columns=["type", "suggestion", "location", "price range", "rating","trip_day"])
         # Save itinerary to a CSV file
-        itinerary_file_name = "itinerary.csv"
-        suggested_itinerary_df.to_csv(itinerary_file_name, index=False)
-        print(f"\nSaved itinerary to {itinerary_file_name}")
+        suggested_itinerary_df.to_csv("itinerary.csv", index=False)
+        print(f"\nSaved itinerary to itinerary.csv")
 
         # Print itinerary to the screen
         print("\nItinerary:")

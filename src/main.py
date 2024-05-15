@@ -31,6 +31,8 @@ def main():
     
             # Save itinerary to CSV
             itinerary.to_csv("itinerary.csv", index=False)
+
+
     
             print("Itinerary saved to 'itinerary.csv'")
             
