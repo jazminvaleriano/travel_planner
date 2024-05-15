@@ -4,25 +4,6 @@
 
 Welcome to the TripTrek project! This repository contains a simple tool meant to make travel planning easier by automating the creation of ideal itineraries for your favorite destination. Whether you're an experienced traveler or starting out on your first adventure, TripTrek will help you make the most of your vacation.
 
-### Features:
-
-- Users can customize their itinerary by specifying their destination city, travel preferences, and schedule. 
-- TripTrek Itinerary generator can help you plan your activities efficiently, optimizing your time and comfort.
-- Retrieve Top-Rated Tourist Sites: TripTrek will find the best-rated tourist sites in your chosen location and prioritize them based on the length of your trip. This ensures that your schedule contains the must-see sights and experiences.
-
-## How to Get Involved:
-
-We welcome contributions from developers, designers, and travelers alike! If you're passionate about travel and technology, there are numerous ways to get involved with TripTrek:
-
-Join our GitHub repository to help build new features and improve existing ones.
-### Developers: Assist in achieving the long-term goal of public transportation integration.
-Work on improving algorithms for itinerary development and route planning.
-### Designers:
-Design user interfaces and enhance the user experience to make TripTrek more intuitive and visually appealing.
-Create visual assets and branding pieces to improve the overall appearance and feel of the application.
-### Travel enthusiasts:
-Share feedback and suggestions for improving the TripTrek experience based on your travel experiences and preferences.
-
 ## Timeline:
 
 ### Choose a Project + Project Management
@@ -57,6 +38,16 @@ Share feedback and suggestions for improving the TripTrek experience based on yo
 - Tasks: 
     - Create virtual environment for TripTrek app deployment.
     - Prepare an in-person presentation to highlight TripTrek's features and functionalities.
+
+
+Join our GitHub repository to help build new features and improve existing ones.
+### Developers: Assist in achieving the long-term goal of public transportation integration.
+Work on improving algorithms for itinerary development and route planning.
+### Designers:
+Design user interfaces and enhance the user experience to make TripTrek more intuitive and visually appealing.
+Create visual assets and branding pieces to improve the overall appearance and feel of the application.
+### Travel enthusiasts:
+Share feedback and suggestions for improving the TripTrek experience based on your travel experiences and preferences.
 
 
 
