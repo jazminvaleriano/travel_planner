@@ -116,7 +116,7 @@ class TripPlanner:
         suggestions = []
         trip_row = self.trip_details.iloc[-1]  # Accessing the most recent trip details
         destination_city = trip_row['destination_city']
-        destination_country = trip_row['destination_country']
+        destination_country =  trip_row['destination_country']
         stay_days = trip_row['stay_days']
         budget_range = trip_row['budget_range']
         
@@ -124,7 +124,7 @@ class TripPlanner:
         attractions = self.get_attractions_for_city(destination_city)
         selected_attractions = self.select_attractions(attractions, stay_days)
         for _, attraction in selected_attractions.iterrows():
-            suggestions.append(["Attraction", attraction['name'], attraction['location'], attraction['price_range'], attraction['rating'], attraction['trip_day']])
+            suggestions.append(["Attraction",destination_country, attraction['name'], attraction['location'], attraction['price_range'], attraction['rating'], attraction['trip_day']])
 
         # Get restaurants for the destination city based on budget range
         restaurants = self.get_restaurants_for_city(destination_city, budget_range)
@@ -133,23 +133,37 @@ class TripPlanner:
             suggestions.append(["Restaurant",destination_country, restaurant['name'], restaurant['location'], restaurant['price_range'], restaurant['rating'], restaurant['trip_day']])
         
         # Convert suggestions to DataFrame
-        suggestions_df = pd.DataFrame(suggestions, columns=["type", "Country","suggestion", "location", "price range", "rating", "trip_day"])
+        suggestions_df = pd.DataFrame(suggestions, columns=["type", "Country","suggestion", "location", "price_range", "rating", "trip_day"])
     
         # Merge with the DataFrame containing country-wise meal prices
         meal_prices_df = pd.read_csv("data/CountrySpecific_RestaurantCost.csv")  
-        suggestions_with_costs = pd.merge(suggestions_df, meal_prices_df, left_on='location', right_on='Country', how='left')
-            
+        suggestions_with_costs = pd.merge(suggestions_df, meal_prices_df, on='Country', how='left')
+        
         # Calculate estimated cost per meal based on price range and country
         def calculate_estimated_cost(row):
-            if row['price range'] == 'high':
-                return row['Price'] * 2.5  
-            elif row['price range'] == 'med':
-                return row['Price'] * 1.5  
-            else:
-                return row['Price']  # DataFrame contains data for low budget meals
-        
-        suggestions_with_costs['estimated_cost_per_meal'] = suggestions_with_costs.apply(calculate_estimated_cost, axis=1)
-        
+            if row['type'] == 'Restaurant':
+                if row['price_range'] == '$$$$$':
+                    return row['Price'] * 4  
+                if row['price_range'] == '$$$$':
+                    return row['Price'] * 3.5  
+                if row['price_range'] == '$$$':
+                    return row['Price'] * 2.25  
+                elif row['price_range'] == '$$':
+                    return row['Price'] * 1.5  
+                else:
+                    return row['Price']  # DataFrame contains data for low budget meals
+            else:  # For attractions, calculate based on the provided assumptions
+                if row['price_range'] == '$':
+                    return 15  # Average price for attractions with 1 $
+                elif row['price_range'] == '$$':
+                    return 38  # Average price for attractions with 2 $$
+                elif row['price_range'] == '$$$':
+                    return 75  # Average price for attractions with 3 $$$
+                elif row['price_range'] == '$$$$':
+                    return 150  # Average price for attractions with 4 $$$$
+                
+        suggestions_with_costs['estimated_cost'] = suggestions_with_costs.apply(calculate_estimated_cost, axis=1)
+        suggestions_with_costs = suggestions_with_costs[['type', 'suggestion', 'location', 'price_range', 'rating', 'estimated_cost']]
         # Save itinerary to a CSV file
         suggestions_with_costs.to_csv("itinerary.csv", index=False)
         print(f"\nItinerary saved to itinerary.csv!")

@@ -1,9 +1,13 @@
-type,destination_country,suggestion,location,price range,rating,trip_day,Country,Price,estimated_cost_per_meal
-Attraction,Seine River Cruise,"{'latitude': 48.8584, 'longitude': 2.3526}",$$,4.8,1.0,,,,
-Attraction,Luxembourg Gardens,"{'latitude': 48.8462, 'longitude': 2.3372}",$,4.7,2.0,,,,
-Attraction,Musée du Louvre,"{'latitude': 48.8606, 'longitude': 2.3376}",$$,4.7,1.0,,,,
-Attraction,Musée du Louvre,"{'latitude': 48.8606, 'longitude': 2.3376}",$$,4.7,2.0,,,,
-Restaurant,France,Le Bouchon Français,"{'latitude': 48.8745, 'longitude': 2.3587}",$,4.3,1.0,,,
-Restaurant,France,Le Petit Bistroquet,"{'latitude': 48.8642, 'longitude': 2.3501}",$,4.3,2.0,,,
-Restaurant,France,Café de la Seine,"{'latitude': 48.8612, 'longitude': 2.3518}",$,4.2,1.0,,,
-Restaurant,France,La Petite Auberge,"{'latitude': 48.8547, 'longitude': 2.3406}",$,4.2,2.0,,,
+type,suggestion,location,price_range,rating,estimated_cost
+Attraction,Central Park,"{'latitude': 40.7851, 'longitude': -73.9683}",$,4.8,15.0
+Attraction,Metropolitan Museum of Art,"{'latitude': 40.7794, 'longitude': -73.9632}",$$$,4.7,75.0
+Attraction,The High Line,"{'latitude': 40.7471, 'longitude': -74.0043}",$$,4.7,38.0
+Attraction,Rockefeller Center,"{'latitude': 40.7587, 'longitude': -73.9787}",$$,4.7,38.0
+Attraction,The Guggenheim Museum,"{'latitude': 40.7829, 'longitude': -73.9589}",$$$,4.7,75.0
+Attraction,Intrepid Sea Air & Space Museum,"{'latitude': 40.7646, 'longitude': -73.9996}",$$$,4.7,75.0
+Restaurant,Eleven Madison Park,"{'latitude': 40.7419, 'longitude': -73.9876}",$$$$$,4.9,80.0
+Restaurant,Per Se,"{'latitude': 40.7685, 'longitude': -73.9825}",$$$$$,4.8,80.0
+Restaurant,Daniel,"{'latitude': 40.7663, 'longitude': -73.9679}",$$$$,4.8,70.0
+Restaurant,Jean-Georges,"{'latitude': 40.7698, 'longitude': -73.9817}",$$$$,4.8,70.0
+Restaurant,Le Bernadin,"{'latitude': 40.7616, 'longitude': -73.9811}",$$$$,4.8,70.0
+Restaurant,Le Bernardin,"{'latitude': 40.7617, 'longitude': -73.9812}",$$$$,4.8,70.0

@@ -1,14 +1,14 @@
 name,city,rating,num_reviews,location,price_range
-Eiffel Tower,Paris,4.5,10000,"{'latitude': 48.8584, 'longitude': 2.2945}",$$ - $$$
+Eiffel Tower,Paris,4.5,10000,"{'latitude': 48.8584, 'longitude': 2.2945}",$$
 Notre-Dame Cathedral,Paris,4.7,15000,"{'latitude': 48.853, 'longitude': 2.3498}",$
 Montmartre,Paris,4.6,12000,"{'latitude': 48.8867, 'longitude': 2.3431}",$
 Seine River Cruise,Paris,4.8,17000,"{'latitude': 48.8584, 'longitude': 2.3526}",$$
 Musée d'Orsay,Paris,4.7,14000,"{'latitude': 48.8606, 'longitude': 2.3264}",$$
 Sainte-Chapelle,Paris,4.7,16000,"{'latitude': 48.8556, 'longitude': 2.3458}",$
-Palace of Versailles,Paris,4.6,13000,"{'latitude': 48.8049, 'longitude': 2.1204}",$$ - $$$
+Palace of Versailles,Paris,4.6,13000,"{'latitude': 48.8049, 'longitude': 2.1204}",$$
 Centre Pompidou,Paris,4.5,11000,"{'latitude': 48.8606, 'longitude': 2.3522}",$$
 Luxembourg Gardens,Paris,4.7,18000,"{'latitude': 48.8462, 'longitude': 2.3372}",$
-Moulin Rouge,Paris,4.5,11000,"{'latitude': 48.8847, 'longitude': 2.3321}",$$ - $$$
+Moulin Rouge,Paris,4.5,11000,"{'latitude': 48.8847, 'longitude': 2.3321}",$$
 Palais Garnier,Paris,4.7,15000,"{'latitude': 48.8718, 'longitude': 2.3311}",$$$
 Saint-Germain-des-Prés,Paris,4.6,13000,"{'latitude': 48.8531, 'longitude': 2.3336}",$$
 Père Lachaise Cemetery,Paris,4.6,12000,"{'latitude': 48.8614, 'longitude': 2.3933}",$
@@ -38,7 +38,7 @@ Opéra Bastille,Paris,4.6,13000,"{'latitude': 48.8523, 'longitude': 2.3705}",$$
 Catacombs of Paris,Paris,4.5,14000,"{'latitude': 48.8339, 'longitude': 2.3326}",$
 Saint-Sulpice Church,Paris,4.6,15000,"{'latitude': 48.8508, 'longitude': 2.3339}",$$
 Palais-Royal,Paris,4.7,16000,"{'latitude': 48.8649, 'longitude': 2.3377}",$$
-Tower Bridge,London,4.6,16000,"{'latitude': 51.5055, 'longitude': -0.0754}",$$ - $$$
+Tower Bridge,London,4.6,16000,"{'latitude': 51.5055, 'longitude': -0.0754}",$$
 British Museum,London,4.7,18000,"{'latitude': 51.5194, 'longitude': -0.127,}",$$
 Buckingham Palace,London,4.7,17000,"{'latitude': 51.5014, 'longitude': -0.1419}",$$
 London Eye,London,4.5,15000,"{'latitude': 51.5033, 'longitude': -0.1195}",$$$
@@ -69,7 +69,7 @@ Tate Britain,London,4.6,17000,"{'latitude': 51.491, 'longitude': -0.1276}",$$$
 The Serpentine,London,4.7,18000,"{'latitude': 51.5077, 'longitude': -0.1658}",$$
 Royal Botanic Gardens Kew,London,4.6,16000,"{'latitude': 51.4785, 'longitude': -0.295}",$$
 Cutty Sark,London,4.5,15000,"{'latitude': 51.4822, 'longitude': -0.0095}",$$$
-Statue of Liberty,New York,4.7,17000,"{'latitude': 40.6892, 'longitude': -74.0445}",$$ - $$$
+Statue of Liberty,New York,4.7,17000,"{'latitude': 40.6892, 'longitude': -74.0445}",$$
 Central Park,New York,4.8,19000,"{'latitude': 40.7851, 'longitude': -73.9683}",$
 Times Square,New York,4.6,16000,"{'latitude': 40.758, 'longitude': -73.9855}",$$$
 Empire State Building,New York,4.6,15000,"{'latitude': 40.7488, 'longitude': -73.9857}",$$$
