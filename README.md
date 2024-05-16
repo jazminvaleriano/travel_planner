@@ -2,7 +2,16 @@
 
 Welcome to the TripTrek project! This repository contains a prototype tool designed to simplify travel planning by generating itineraries, creating a budget and tracking expenses for your next adventure. 
 
-## Features
+## ⚠️ Important Updates and Instructions (As of May 16th)
+Please note that for the moment we're unable to access real-time data from traveling websites for attractions and restaurants worldwide. Consequently, our datasets are currently limited. When testing the tool, please consider the following:
+- At this time, TripTrek fully supports Paris, London, and New York only.
+- We recommend keeping your trip length under 4 days. We're actively working on a solution to provide better recommendations for longer trips.
+
+If the instructions and recommendations are followed, TripTrek is able to:
+- Generate a suggested itinerary in .csv for the duration of your trip including attractions, restaurants, and optionally activities added manually by the user, along with costs estimates.
+- Generate a budget csv file organized by category including both data from the suggested itinerary or entered manually by user. 
+
+## Goal Features
 * **Customizable Itineraries**: Users can specify their destination city, travel preferences and schedule. TripTrek Itinerary Generator will organize your activities efficiently, and estimate your trip costs, maximizing your time and enjoyment.
 * **Budget Management**: You can use TripTrek to keep track of your trip expenses (such as accommodation costs, transportation, meals, and activities), and stay within budget. 
 * **Data visualization and Trip Analysis**: Provide users with visualizations of their trip data, such as a timeline of planned activities or a breakdown of expenses by category. Allow users to analyze their travel patterns and budget usage to optimize future trips.  
@@ -14,24 +23,35 @@ _Features to be added only if time allows:_
 
 ## Getting Started
 
-### Dependencies
 
-* Python 3.7
-* Libraries (to be determined)
+### Installation
 
-### Usage
-1. Clone the repository 
-2. Download and install required libs and data:
-```bash
-pip install requirements.txt
-```
-*To be updated*
-* How to run the program
-* Step-by-step bullets
-* Usage examples
-```
-code blocks for usage examples
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   ```
+2. Make sure you have Python Installed
+3. Download and install required libs and data:
+    ```bash
+    pip install requirements.txt
+    ```
+2. Navigate to the project directory:
+   ```bash
+   cd travel_planner
+   ```
+
+## Usage
+
+To run the interface, follow these steps:
+
+1. Open a terminal or command prompt.
+2. Navigate to the project directory if you haven't already.
+3. Run the following command:
+   ```bash
+   python src/main.py
+   ```
+4. Follow the instructions on the terminal
+
 ## Contributors
 
 * Merlyne Lawrence [@MerNLP](https://github.com/MerNLP)
