@@ -56,7 +56,7 @@ To run the interface, follow these steps:
 ## Contributors
 
 * Merlyne Lawrence [@MerNLP](https://github.com/MerNLP)
-* Kamdoum Kemfio Hans [@MerNLP](https://github.com/MerNLP)
+* Kamdoum Kemfio Hans [@AssadeckAitock](https://github.com/AssadeckAitock)
 * Assadeck Moussa Aitock [@kmaritinion](https://github.com/kmartinion)
 * Jazmin Valeriano [@jazminvaleriano](https://github.com/jazminvaleriano)
 
