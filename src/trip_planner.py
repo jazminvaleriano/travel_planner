@@ -143,7 +143,7 @@ class TripPlanner:
             suggestions.append(["Restaurant",destination_country, restaurant['name'], restaurant['location'], restaurant['price_range'], restaurant['rating'], restaurant['trip_day']])
         
         # Convert suggestions to DataFrame
-        suggestions_df = pd.DataFrame(suggestions, columns=["type", "Country","suggestion", "location", "price_range", "rating", "trip_day"])
+        suggestions_df = pd.DataFrame(suggestions, columns=["category", "Country","suggestion", "location", "price_range", "rating", "trip_day"])
     
         # Merge with the DataFrame containing country-wise meal prices
         meal_prices_df = pd.read_csv("data/CountrySpecific_RestaurantCost.csv")  
@@ -151,7 +151,7 @@ class TripPlanner:
         
         # Calculate estimated cost per meal based on price range and country
         def calculate_estimated_cost(row):
-            if row['type'] == 'Restaurant':
+            if row['category'] == 'Restaurant':
                 if row['price_range'] == '$$$$$':
                     return row['Price'] * 4  
                 if row['price_range'] == '$$$$':
@@ -173,12 +173,12 @@ class TripPlanner:
                     return 150  # Average price for attractions with 4 $$$$
                 
         suggestions_with_costs['estimated_cost'] = suggestions_with_costs.apply(calculate_estimated_cost, axis=1)
-        suggestions_with_costs = suggestions_with_costs[['trip_day','type', 'suggestion', 'location', 'price_range', 'rating', 'estimated_cost']]
+        suggestions_with_costs = suggestions_with_costs[['trip_day','category', 'suggestion', 'location', 'price_range', 'rating', 'estimated_cost']]
 
         # Create dataframe with extra activities added by user
         activities_data = {
             'trip_day': activities_days,
-            'type': ['Activity defined by user'] * len(activities),
+            'category': ['Activity defined by user'] * len(activities),
             'suggestion': activities,
             'location': ['' for _ in activities],  # Leave location column empty
             'price_range': ['' for _ in activities],  # Leave price_range column empty

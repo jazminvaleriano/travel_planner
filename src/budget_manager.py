@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 class BudgetManager:
     def __init__(self):
@@ -40,29 +41,55 @@ class BudgetManager:
                     # If the file exists, read it
                     itinerary_df = pd.read_csv("itinerary.csv")
                     print("Itinerary loaded successfully.")
-                    # Extract the total budget from the loaded itinerary
-                    total_budget = itinerary_df["estimated_cost"].sum()
+                    # Extract the total budget by category from the loaded itinerary
+                    budget_activities = itinerary_df[(itinerary_df['category'] == 'Attraction') | (itinerary_df['category'] == 'Activity defined by user')]["estimated_cost"].sum()
+                    budget_food = itinerary_df[itinerary_df['category'] == 'Restaurant']["estimated_cost"].sum()
+
                 else:
-                    total_budget = float(input("Enter your total budget for the trip: "))
+                    budget_activities = float(input("Enter your total budget for activities the trip: "))
+                    budget_food = float(input("Enter your total budget for food the trip: "))
+
             else:
-                total_budget = float(input("Enter your total budget for the trip: "))
+                budget_activities = float(input("Enter your total budget for activities the trip: "))
+                budget_food = float(input("Enter your total budget for food the trip: "))
+        
+            # Read trip details to get destination country and stay days
+            trip_details_df = pd.read_csv("trip_details.csv")
+            destination_country = trip_details_df['destination_country'].iloc[0]
+            stay_days = trip_details_df['stay_days'].iloc[0]
+            transportation_mode = trip_details_df['transportation'].iloc[0]
+
+            # Read transportation cost for public transport based on destination country
+
+            if transportation_mode.lower() == 'walking/public transport':
+                transportation_cost_df = pd.read_csv("data/CountrySpecific_TransportationCost.csv")
+                transportation_cost = transportation_cost_df.loc[transportation_cost_df['Country'] == destination_country, 'Public Transportation Cost (USD)'].iloc[0]
+            else:
+                transportation_cost = 100  # Assume $100 per day if transportation mode is taxi 
+                
+            # Calculate transportation budget
+            budget_transportation = transportation_cost * stay_days * 4  # Assuming an average of 4 one way rides per day for public transport
             
-            self.budget = total_budget
-            print(f"Budget of ${total_budget} created successfully.")
+            # Store budget details in a DataFrame
+            budget_data = {
+                'Category': ['Activities', 'Food', 'Transportation'],  # Include Transportation category
+                'Budget': [budget_activities, budget_food, budget_transportation]  # Include transportation_budget
+            }
+            budget_df = pd.DataFrame(budget_data)
+
+            # Save the budget DataFrame to a CSV file
+            budget_df.to_csv('budget.csv', index=False)
+
+            self.budget_food = budget_food
+            self.budget_activities = budget_activities
+            self.budget_transportation = budget_transportation
+            
+            # Calculate total budget correctly
+            self.budget = sum([budget_activities, budget_food, budget_transportation])
+
+            print(f"Budget of ${self.budget} created successfully. See budget.csv for details per category.")
         except ValueError:
             print("Invalid input. Please enter a number for the budget.")
-            
-    def track_expense(self):
-        # Request the user to enter details of a new expense
-        try:
-            category = input("Enter the category of expense (e.g., Accommodation, Food, Transport, etc.): ")
-            amount = float(input(f"Enter the amount spent on {category}: "))
-            # Add the expense to the expenses DataFrame
-            new_expense = pd.DataFrame({"Category": [category], "Amount": [amount]})
-            self.expenses = pd.concat([self.expenses, new_expense], ignore_index=True)
-            print(f"Added expense: {category} - ${amount}")
-        except ValueError:
-            print("Invalid input. Please enter a number for the amount.")
 
     def view_budget_and_expenses(self):
         # Show the user the budget and tracked expenses
