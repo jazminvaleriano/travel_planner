@@ -66,7 +66,7 @@ class BudgetManager:
                 transportation_cost = transportation_cost_df.loc[transportation_cost_df['Country'] == destination_country, 'Public Transportation Cost (USD)'].iloc[0]
             else:
                 transportation_cost = 100  # Assume $100 per day if transportation mode is taxi 
-                
+
             # Calculate transportation budget
             budget_transportation = transportation_cost * stay_days * 4  # Assuming an average of 4 one way rides per day for public transport
             
@@ -91,6 +91,18 @@ class BudgetManager:
         except ValueError:
             print("Invalid input. Please enter a number for the budget.")
 
+    def track_expense(self):
+    # Request the user to enter details of a new expense
+        try:
+            category = input("Enter the category of expense (e.g., Accommodation, Food, Transport, etc.): ")
+            amount = float(input(f"Enter the amount spent on {category}: "))
+            # Add the expense to the expenses DataFrame
+            new_expense = pd.DataFrame({"Category": [category], "Amount": [amount]})
+            self.expenses = pd.concat([self.expenses, new_expense], ignore_index=True)
+            print(f"Added expense: {category} - ${amount}")
+        except ValueError:
+            print("Invalid input. Please enter a number for the amount.")
+        
     def view_budget_and_expenses(self):
         # Show the user the budget and tracked expenses
         if self.budget is None:
