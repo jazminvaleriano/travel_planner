@@ -4,7 +4,7 @@ class BudgetManager:
     def __init__(self):
         # Setting up an empty budget and empty dataframe for expenses
         self.budget = None
-        self.expenses = pd.DataFrame(columns=["Category", "Amount"])
+        self.expenses = pd.DataFrame(columns=["Trip Day","Category", "Amount"])
 
     def manage_budget(self):
         # Create a menu for budget management and for handling the user's choice
@@ -31,12 +31,27 @@ class BudgetManager:
     def create_budget(self):
         # Function to create a budget for the trip
         try:
-            total_budget = float(input("Enter your total budget for the trip: "))
+            # Ask the user if they want to use the generated itinerary or enter manually
+            choice = input("Do you want to use the generated itinerary? (yes/no): ").lower()
+            
+            if choice == 'yes':
+                # Check if itinerary.csv exists
+                if os.path.isfile("itinerary.csv"):
+                    # If the file exists, read it
+                    itinerary_df = pd.read_csv("itinerary.csv")
+                    print("Itinerary loaded successfully.")
+                    # Extract the total budget from the loaded itinerary
+                    total_budget = itinerary_df["estimated_cost"].sum()
+                else:
+                    total_budget = float(input("Enter your total budget for the trip: "))
+            else:
+                total_budget = float(input("Enter your total budget for the trip: "))
+            
             self.budget = total_budget
             print(f"Budget of ${total_budget} created successfully.")
         except ValueError:
             print("Invalid input. Please enter a number for the budget.")
-
+            
     def track_expense(self):
         # Request the user to enter details of a new expense
         try:
