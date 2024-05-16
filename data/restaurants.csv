@@ -63,28 +63,28 @@ Hoppers,London,4.4,3800,"{'latitude': 51.5139, 'longitude': -0.1313}",$$
 Black Axe Mangal,London,4.1,3000,"{'latitude': 51.5486, 'longitude': -0.0766}",$
 The Quality Chop House,London,4.3,3500,"{'latitude': 51.5263, 'longitude': -0.1094}",$$
 Smokestak,London,4.0,2800,"{'latitude': 51.5275, 'longitude': -0.0718}",$
-Eleven Madison Park,New York City,4.9,6000,"{'latitude': 40.7419, 'longitude': -73.9876}",$$$$$
-Per Se,New York City,4.8,5500,"{'latitude': 40.7685, 'longitude': -73.9825}",$$$$$
-Le Bernardin,New York City,4.8,5000,"{'latitude': 40.7617, 'longitude': -73.9812}",$$$$
-Peter Luger Steak House,New York City,4.7,4800,"{'latitude': 40.7090, 'longitude': -73.9622}",$$$
-Katz's Delicatessen,New York City,4.6,4500,"{'latitude': 40.7223, 'longitude': -73.9877}",$$$
-Gramercy Tavern,New York City,4.7,4700,"{'latitude': 40.7383, 'longitude': -73.9886}",$$$
-Jean-Georges,New York City,4.8,5100,"{'latitude': 40.7698, 'longitude': -73.9817}",$$$$
-Del Posto,New York City,4.7,4900,"{'latitude': 40.7438, 'longitude': -74.0073}",$$$
-Daniel,New York City,4.8,5200,"{'latitude': 40.7663, 'longitude': -73.9679}",$$$$
-Blue Hill at Stone Barns,New York City,4.7,4800,"{'latitude': 41.1063, 'longitude': -73.8353}",$$$
-Momofuku Ko,New York City,4.6,4600,"{'latitude': 40.7249, 'longitude': -73.9910}",$$$
-Union Square Cafe,New York City,4.5,4400,"{'latitude': 40.7369, 'longitude': -73.9887}",$$
-Le Coucou,New York City,4.6,4700,"{'latitude': 40.7187, 'longitude': -74.0024}",$$$
-Bouley at Home,New York City,4.7,4900,"{'latitude': 40.7157, 'longitude': -74.0093}",$$$
-Peter Luger Steak House,New York City,4.6,4600,"{'latitude': 40.7488, 'longitude': -73.9861}",$$$
-Cosme,New York City,4.5,4400,"{'latitude': 40.7391, 'longitude': -73.9903}",$$
-Gramercy Tavern,New York City,4.5,4300,"{'latitude': 40.7384, 'longitude': -73.9886}",$$
-Sushi Nakazawa,New York City,4.6,4700,"{'latitude': 40.7316, 'longitude': -74.0077}",$$$
-Estela,New York City,4.4,4200,"{'latitude': 40.7259, 'longitude': -73.9961}",$$
-Marea,New York City,4.5,4300,"{'latitude': 40.7676, 'longitude': -73.9813}",$$$
-Le Bernadin,New York City,4.8,5100,"{'latitude': 40.7616, 'longitude': -73.9811}",$$$$
-Del Posto,New York City,4.7,4800,"{'latitude': 40.7421, 'longitude': -74.0075}",$$$
-Balthazar,New York City,4.4,4100,"{'latitude': 40.7244, 'longitude': -73.9975}",$$
-Momofuku Noodle Bar,New York City,4.3,4000,"{'latitude': 40.7292, 'longitude': -73.9842}",$$
-Gramercy Tavern,New York City,4.5,4300,"{'latitude': 40.7385, 'longitude': -73.9887}",$$
+Eleven Madison Park,New York,4.9,6000,"{'latitude': 40.7419, 'longitude': -73.9876}",$$$$$
+Per Se,New York,4.8,5500,"{'latitude': 40.7685, 'longitude': -73.9825}",$$$$$
+Le Bernardin,New York,4.8,5000,"{'latitude': 40.7617, 'longitude': -73.9812}",$$$$
+Peter Luger Steak House,New York,4.7,4800,"{'latitude': 40.7090, 'longitude': -73.9622}",$$$
+Katz's Delicatessen,New York,4.6,4500,"{'latitude': 40.7223, 'longitude': -73.9877}",$$$
+Gramercy Tavern,New York,4.7,4700,"{'latitude': 40.7383, 'longitude': -73.9886}",$$$
+Jean-Georges,New York,4.8,5100,"{'latitude': 40.7698, 'longitude': -73.9817}",$$$$
+Del Posto,New York,4.7,4900,"{'latitude': 40.7438, 'longitude': -74.0073}",$$$
+Daniel,New York,4.8,5200,"{'latitude': 40.7663, 'longitude': -73.9679}",$$$$
+Blue Hill at Stone Barns,New York,4.7,4800,"{'latitude': 41.1063, 'longitude': -73.8353}",$$$
+Momofuku Ko,New York,4.6,4600,"{'latitude': 40.7249, 'longitude': -73.9910}",$$$
+Union Square Cafe,New York,4.5,4400,"{'latitude': 40.7369, 'longitude': -73.9887}",$$
+Le Coucou,New York,4.6,4700,"{'latitude': 40.7187, 'longitude': -74.0024}",$$$
+Bouley at Home,New York,4.7,4900,"{'latitude': 40.7157, 'longitude': -74.0093}",$$$
+Peter Luger Steak House,New York,4.6,4600,"{'latitude': 40.7488, 'longitude': -73.9861}",$$$
+Cosme,New York,4.5,4400,"{'latitude': 40.7391, 'longitude': -73.9903}",$$
+Gramercy Tavern,New York,4.5,4300,"{'latitude': 40.7384, 'longitude': -73.9886}",$$
+Sushi Nakazawa,New York,4.6,4700,"{'latitude': 40.7316, 'longitude': -74.0077}",$$$
+Estela,New York,4.4,4200,"{'latitude': 40.7259, 'longitude': -73.9961}",$$
+Marea,New York,4.5,4300,"{'latitude': 40.7676, 'longitude': -73.9813}",$$$
+Le Bernadin,New York,4.8,5100,"{'latitude': 40.7616, 'longitude': -73.9811}",$$$$
+Del Posto,New York,4.7,4800,"{'latitude': 40.7421, 'longitude': -74.0075}",$$$
+Balthazar,New York,4.4,4100,"{'latitude': 40.7244, 'longitude': -73.9975}",$$
+Momofuku Noodle Bar,New York,4.3,4000,"{'latitude': 40.7292, 'longitude': -73.9842}",$$
+Gramercy Tavern,New York,4.5,4300,"{'latitude': 40.7385, 'longitude': -73.9887}",$$

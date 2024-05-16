@@ -1,9 +1,9 @@
 type,suggestion,location,price range,rating,trip_day
-Attraction,Louvre Museum,"{'latitude': 48.8606, 'longitude': 2.3376}",$$,4.8,1
-Attraction,Seine River Cruise,"{'latitude': 48.8584, 'longitude': 2.3526}",$$,4.8,2
-Attraction,Luxembourg Gardens,"{'latitude': 48.8462, 'longitude': 2.3372}",$,4.7,1
-Attraction,Sainte-Chapelle,"{'latitude': 48.8556, 'longitude': 2.3458}",$,4.7,2
-Restaurant,Café de la Seine,"{'latitude': 48.8612, 'longitude': 2.3518}",$,4.2,1
-Restaurant,La Petite Auberge,"{'latitude': 48.8547, 'longitude': 2.3406}",$,4.2,2
-Restaurant,Bistro Bon Appétit,"{'latitude': 48.8653, 'longitude': 2.3411}",$,4.1,1
-Restaurant,La Boulangerie Parisienne,"{'latitude': 48.8687, 'longitude': 2.3487}",$,4.1,2
+Attraction,,,,,1
+Attraction,,,,,2
+Attraction,,,,,1
+Attraction,,,,,2
+Restaurant,,,,,1
+Restaurant,,,,,2
+Restaurant,,,,,1
+Restaurant,,,,,2
