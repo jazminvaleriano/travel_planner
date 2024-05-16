@@ -1,2 +1,2 @@
-destination_city,destination_country,stay_days,transportation,budget_range,activities
-New York,United States,3,walking/public transport,high,[]
+destination_city,destination_country,stay_days,transportation,budget_range,activities,activities_costs,activities_days
+London,United Kingdom,4,taxi,high,['acti'],['7'],[2]

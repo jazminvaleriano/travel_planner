@@ -1,13 +1,18 @@
-type,suggestion,location,price_range,rating,estimated_cost
-Attraction,Central Park,"{'latitude': 40.7851, 'longitude': -73.9683}",$,4.8,15.0
-Attraction,Metropolitan Museum of Art,"{'latitude': 40.7794, 'longitude': -73.9632}",$$$,4.7,75.0
-Attraction,The High Line,"{'latitude': 40.7471, 'longitude': -74.0043}",$$,4.7,38.0
-Attraction,Rockefeller Center,"{'latitude': 40.7587, 'longitude': -73.9787}",$$,4.7,38.0
-Attraction,The Guggenheim Museum,"{'latitude': 40.7829, 'longitude': -73.9589}",$$$,4.7,75.0
-Attraction,Intrepid Sea Air & Space Museum,"{'latitude': 40.7646, 'longitude': -73.9996}",$$$,4.7,75.0
-Restaurant,Eleven Madison Park,"{'latitude': 40.7419, 'longitude': -73.9876}",$$$$$,4.9,80.0
-Restaurant,Per Se,"{'latitude': 40.7685, 'longitude': -73.9825}",$$$$$,4.8,80.0
-Restaurant,Daniel,"{'latitude': 40.7663, 'longitude': -73.9679}",$$$$,4.8,70.0
-Restaurant,Jean-Georges,"{'latitude': 40.7698, 'longitude': -73.9817}",$$$$,4.8,70.0
-Restaurant,Le Bernadin,"{'latitude': 40.7616, 'longitude': -73.9811}",$$$$,4.8,70.0
-Restaurant,Le Bernardin,"{'latitude': 40.7617, 'longitude': -73.9812}",$$$$,4.8,70.0
+trip_day,type,suggestion,location,price_range,rating,estimated_cost
+1,Attraction,Hyde Park,"{'latitude': 51.5073, 'longitude': -0.1657}",$,4.7,15.0
+1,Attraction,British Museum,"{'latitude': 51.5194, 'longitude': -0.127}",$$,4.7,38.0
+1,Restaurant,Core by Clare Smyth,"{'latitude': 51.5149, 'longitude': -0.2017}",$$$$,4.9,66.22
+1,Restaurant,The Ledbury,"{'latitude': 51.5171, 'longitude': -0.1947}",$$$$,4.8,66.22
+2,Activity defined by user,acti,,,,7
+2,Attraction,National Gallery,"{'latitude': 51.5089, 'longitude': -0.1283}",$$,4.7,38.0
+2,Restaurant,Alain Ducasse at The Dorchester,"{'latitude': 51.5079, 'longitude': -0.1511}",$$$$,4.7,66.22
+2,Attraction,Westminster Abbey,"{'latitude': 51.4994, 'longitude': -0.1273}",$$$,4.7,75.0
+2,Restaurant,Restaurant Gordon Ramsay,"{'latitude': 51.4851, 'longitude': -0.1624}",$$$$,4.9,66.22
+3,Attraction,Windsor Castle,"{'latitude': 51.4839, 'longitude': -0.6043}",$$$,4.7,75.0
+3,Attraction,St. James's Park,"{'latitude': 51.5027, 'longitude': -0.1346}",$,4.7,15.0
+3,Restaurant,Marcus,"{'latitude': 51.5087, 'longitude': -0.1275}",$$$,4.7,42.57000000000001
+3,Restaurant,Dinner by Heston Blumenthal,"{'latitude': 51.5015, 'longitude': -0.1592}",$$$$,4.8,66.22
+4,Attraction,The British Library,"{'latitude': 51.5299, 'longitude': -0.1276}",$$$,4.7,75.0
+4,Attraction,Trafalgar Square,"{'latitude': 51.508, 'longitude': -0.1281}",$$,4.7,38.0
+4,Restaurant,The River Café,"{'latitude': 51.4847, 'longitude': -0.2089}",$$$$,4.8,66.22
+4,Restaurant,The Clove Club,"{'latitude': 51.5247, 'longitude': -0.0772}",$$$,4.7,42.57000000000001

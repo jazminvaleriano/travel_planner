@@ -28,18 +28,38 @@ Opéra Bastille,Paris,4.6,13000,"{'latitude': 48.8523, 'longitude': 2.3705}",$$
 Catacombs of Paris,Paris,4.5,14000,"{'latitude': 48.8339, 'longitude': 2.3326}",$
 Saint-Sulpice Church,Paris,4.6,15000,"{'latitude': 48.8508, 'longitude': 2.3339}",$$
 Palais-Royal,Paris,4.7,16000,"{'latitude': 48.8649, 'longitude': 2.3377}",$$
-Musée du Louvre,Paris,4.7,18000,"{'latitude': 48.8606, 'longitude': 2.3376}",$$
-Champs-Élysées,Paris,4.6,15000,"{'latitude': 48.8698, 'longitude': 2.307}",$$
-Pantheon,Paris,4.5,12000,"{'latitude': 48.8462, 'longitude': 2.3464}",$$
-Musée de l'Armée,Paris,4.6,13000,"{'latitude': 48.8566, 'longitude': 2.3144}",$$
-Place des Vosges,Paris,4.7,14000,"{'latitude': 48.854, 'longitude': 2.3677}",$$
-Montparnasse Tower,Paris,4.5,11000,"{'latitude': 48.8412, 'longitude': 2.3201}",$$
-Opéra Bastille,Paris,4.6,13000,"{'latitude': 48.8523, 'longitude': 2.3705}",$$
-Catacombs of Paris,Paris,4.5,14000,"{'latitude': 48.8339, 'longitude': 2.3326}",$
-Saint-Sulpice Church,Paris,4.6,15000,"{'latitude': 48.8508, 'longitude': 2.3339}",$$
-Palais-Royal,Paris,4.7,16000,"{'latitude': 48.8649, 'longitude': 2.3377}",$$
+Statue of Liberty,New York,4.7,20000,"{'latitude': 40.6892, 'longitude': -74.0445}",$$$
+Central Park,New York,4.8,25000,"{'latitude': 40.7851, 'longitude': -73.9683}",$
+Empire State Building,New York,4.6,23000,"{'latitude': 40.7484, 'longitude': -73.9857}",$$$
+Times Square,New York,4.5,24000,"{'latitude': 40.758, 'longitude': -73.9855}",$
+Brooklyn Bridge,New York,4.7,22000,"{'latitude': 40.7061, 'longitude': -73.9969}",$
+Metropolitan Museum of Art,New York,4.8,25000,"{'latitude': 40.7794, 'longitude': -73.9632}",$$
+Broadway,New York,4.6,24000,"{'latitude': 40.759, 'longitude': -73.9845}",$$$
+Rockefeller Center,New York,4.6,23000,"{'latitude': 40.7587, 'longitude': -73.9787}",$$
+Museum of Modern Art (MoMA),New York,4.7,22000,"{'latitude': 40.7614, 'longitude': -73.9776}",$$
+One World Trade Center,New York,4.7,21000,"{'latitude': 40.7127, 'longitude': -74.0134}",$$$
+Fifth Avenue,New York,4.5,23000,"{'latitude': 40.7756, 'longitude': -73.9654}",$$$
+American Museum of Natural History,New York,4.7,25000,"{'latitude': 40.7813, 'longitude': -73.9735}",$$
+The High Line,New York,4.6,21000,"{'latitude': 40.748, 'longitude': -74.0048}",$
+Chrysler Building,New York,4.5,22000,"{'latitude': 40.7516, 'longitude': -73.9755}",$$
+New York Public Library,New York,4.7,23000,"{'latitude': 40.7532, 'longitude': -73.9822}",$
+Grand Central Terminal,New York,4.6,24000,"{'latitude': 40.7527, 'longitude': -73.9772}",$$
+Wall Street,New York,4.5,22000,"{'latitude': 40.7074, 'longitude': -74.0113}",$
+Radio City Music Hall,New York,4.6,23000,"{'latitude': 40.760, 'longitude': -73.9795}",$$
+Madison Square Garden,New York,4.5,21000,"{'latitude': 40.7505, 'longitude': -73.9934}",$$$
+Solomon R. Guggenheim Museum,New York,4.7,24000,"{'latitude': 40.7830, 'longitude': -73.9580}",$$
+Lincoln Center,New York,4.6,22000,"{'latitude': 40.7725, 'longitude': -73.9850}",$$
+Intrepid Sea Air & Space Museum,New York,4.6,23000,"{'latitude': 40.7645, 'longitude': -73.9996}",$$$
+Ellis Island,New York,4.7,24000,"{'latitude': 40.6995, 'longitude': -74.0396}",$$
+St. Patrick's Cathedral,New York,4.5,21000,"{'latitude': 40.7584, 'longitude': -73.9750}",$
+Met Cloisters,New York,4.6,22000,"{'latitude': 40.8649, 'longitude': -73.9317}",$$
+Bronx Zoo,New York,4.6,25000,"{'latitude': 40.8506, 'longitude': -73.8770}",$$$
+Washington Square Park,New York,4.7,23000,"{'latitude': 40.7308, 'longitude': -73.9973}",$
+Carnegie Hall,New York,4.6,22000,"{'latitude': 40.7651, 'longitude': -73.9799}",$$$
+New York Botanical Garden,New York,4.6,24000,"{'latitude': 40.8616, 'longitude': -73.8802}",$$$
+Coney Island,New York,4.5,21000,"{'latitude': 40.5749, 'longitude': -73.9850}",$$
 Tower Bridge,London,4.6,16000,"{'latitude': 51.5055, 'longitude': -0.0754}",$$
-British Museum,London,4.7,18000,"{'latitude': 51.5194, 'longitude': -0.127,}",$$
+British Museum,London,4.7,18000,"{'latitude': 51.5194, 'longitude': -0.127}",$$
 Buckingham Palace,London,4.7,17000,"{'latitude': 51.5014, 'longitude': -0.1419}",$$
 London Eye,London,4.5,15000,"{'latitude': 51.5033, 'longitude': -0.1195}",$$$
 Tate Modern,London,4.6,16000,"{'latitude': 51.5076, 'longitude': -0.0994}",$$
@@ -67,35 +87,34 @@ Trafalgar Square,London,4.7,19000,"{'latitude': 51.508, 'longitude': -0.1281}",$
 National Maritime Museum,London,4.5,14000,"{'latitude': 51.4806, 'longitude': -0.0057}",$$
 Tate Britain,London,4.6,17000,"{'latitude': 51.491, 'longitude': -0.1276}",$$$
 The Serpentine,London,4.7,18000,"{'latitude': 51.5077, 'longitude': -0.1658}",$$
-Royal Botanic Gardens Kew,London,4.6,16000,"{'latitude': 51.4785, 'longitude': -0.295}",$$
-Cutty Sark,London,4.5,15000,"{'latitude': 51.4822, 'longitude': -0.0095}",$$$
-Statue of Liberty,New York,4.7,17000,"{'latitude': 40.6892, 'longitude': -74.0445}",$$
-Central Park,New York,4.8,19000,"{'latitude': 40.7851, 'longitude': -73.9683}",$
-Times Square,New York,4.6,16000,"{'latitude': 40.758, 'longitude': -73.9855}",$$$
-Empire State Building,New York,4.6,15000,"{'latitude': 40.7488, 'longitude': -73.9857}",$$$
-Metropolitan Museum of Art,New York,4.7,18000,"{'latitude': 40.7794, 'longitude': -73.9632}",$$$
-One World Trade Center,New York,4.7,17000,"{'latitude': 40.7127, 'longitude': -74.0134}",$$$
-Brooklyn Bridge,New York,4.6,16000,"{'latitude': 40.7061, 'longitude': -73.9969}",$$
-The High Line,New York,4.7,18000,"{'latitude': 40.7471, 'longitude': -74.0043}",$$
-Broadway,New York,4.6,15000,"{'latitude': 40.759, 'longitude': -73.9845}",$$$
-The Museum of Modern Art (MoMA),New York,4.7,17000,"{'latitude': 40.7614, 'longitude': -73.9776}",$$$
-The Vessel,New York,4.5,14000,"{'latitude': 40.7537, 'longitude': -74.0022}",$$
-Central Park Zoo,New York,4.6,16000,"{'latitude': 40.7677, 'longitude': -73.9718}",$$$
-Rockefeller Center,New York,4.7,18000,"{'latitude': 40.7587, 'longitude': -73.9787}",$$
-The Metropolitan Opera House,New York,4.6,15000,"{'latitude': 40.7729, 'longitude': -73.9839}",$$$
-New York Public Library,New York,4.7,17000,"{'latitude': 40.7532, 'longitude': -73.9828}",$$
-American Museum of Natural History,New York,4.7,17000,"{'latitude': 40.7813, 'longitude': -73.9731}",$$$
-Fifth Avenue,New York,4.6,16000,"{'latitude': 40.7644, 'longitude': -73.9755}",$$
-Staten Island Ferry,New York,4.5,14000,"{'latitude': 40.6892, 'longitude': -74.0445}",$
-Madison Square Garden,New York,4.6,16000,"{'latitude': 40.7505, 'longitude': -73.9934}",$$$
-The Guggenheim Museum,New York,4.7,18000,"{'latitude': 40.7829, 'longitude': -73.9589}",$$$
-Broadway Theatre District,New York,4.6,15000,"{'latitude': 40.758, 'longitude': -73.9855}",$$$
-Coney Island,New York,4.5,14000,"{'latitude': 40.5749, 'longitude': -73.985}",$$$
-New York Botanical Garden,New York,4.6,16000,"{'latitude': 40.8633, 'longitude': -73.8779}",$$$
-Ellis Island,New York,4.5,14000,"{'latitude': 40.6997, 'longitude': -74.0393}",$$
-Radio Music Hall,New York,4.6,16000,"{'latitude': 40.759, 'longitude': -73.9793}",$$$
-Intrepid Sea Air & Space Museum,New York,4.7,18000,"{'latitude': 40.7646, 'longitude': -73.9996}",$$$
-The Frick Collection,New York,4.6,15000,"{'latitude': 40.7707, 'longitude': -73.9675}",$$$
-South Street Seaport,New York,4.5,14000,"{'latitude': 40.7069, 'longitude': -74.0035}",$$
-Gantry Plaza State Park,New York,4.6,16000,"{'latitude': 40.7468, 'longitude': -73.9567}",$$
-Grand Central Terminal,New York,4.7,18000,"{'latitude': 40.7527, 'longitude': -73.9772}",$$
+Royal Botanic Gardens Kew,London,4.6,16000,"{'latitude': 51.4785, 'longitude': -0.2956}",$$$
+Statue of Liberty,New York,4.7,20000,"{'latitude': 40.6892, 'longitude': -74.0445}",$$$
+Central Park,New York,4.8,25000,"{'latitude': 40.7851, 'longitude': -73.9683}",$
+Empire State Building,New York,4.6,23000,"{'latitude': 40.7484, 'longitude': -73.9857}",$$$
+Times Square,New York,4.5,24000,"{'latitude': 40.758, 'longitude': -73.9855}",$
+Brooklyn Bridge,New York,4.7,22000,"{'latitude': 40.7061, 'longitude': -73.9969}",$
+Metropolitan Museum of Art,New York,4.8,25000,"{'latitude': 40.7794, 'longitude': -73.9632}",$$
+Broadway,New York,4.6,24000,"{'latitude': 40.759, 'longitude': -73.9845}",$$$
+Rockefeller Center,New York,4.6,23000,"{'latitude': 40.7587, 'longitude': -73.9787}",$$
+Museum of Modern Art (MoMA),New York,4.7,22000,"{'latitude': 40.7614, 'longitude': -73.9776}",$$
+One World Trade Center,New York,4.7,21000,"{'latitude': 40.7127, 'longitude': -74.0134}",$$$
+Fifth Avenue,New York,4.5,23000,"{'latitude': 40.7756, 'longitude': -73.9654}",$$$
+American Museum of Natural History,New York,4.7,25000,"{'latitude': 40.7813, 'longitude': -73.9735}",$$
+The High Line,New York,4.6,21000,"{'latitude': 40.748, 'longitude': -74.0048}",$
+Chrysler Building,New York,4.5,22000,"{'latitude': 40.7516, 'longitude': -73.9755}",$$
+New York Public Library,New York,4.7,23000,"{'latitude': 40.7532, 'longitude': -73.9822}",$
+Grand Central Terminal,New York,4.6,24000,"{'latitude': 40.7527, 'longitude': -73.9772}",$$
+Wall Street,New York,4.5,22000,"{'latitude': 40.7074, 'longitude': -74.0113}",$
+Radio City Music Hall,New York,4.6,23000,"{'latitude': 40.760, 'longitude': -73.9795}",$$
+Madison Square Garden,New York,4.5,21000,"{'latitude': 40.7505, 'longitude': -73.9934}",$$$
+Solomon R. Guggenheim Museum,New York,4.7,24000,"{'latitude': 40.7830, 'longitude': -73.9580}",$$
+Lincoln Center,New York,4.6,22000,"{'latitude': 40.7725, 'longitude': -73.9850}",$$
+Intrepid Sea Air & Space Museum,New York,4.6,23000,"{'latitude': 40.7645, 'longitude': -73.9996}",$$$
+Ellis Island,New York,4.7,24000,"{'latitude': 40.6995, 'longitude': -74.0396}",$$
+St. Patrick's Cathedral,New York,4.5,21000,"{'latitude': 40.7584, 'longitude': -73.9750}",$
+Met Cloisters,New York,4.6,22000,"{'latitude': 40.8649, 'longitude': -73.9317}",$$
+Bronx Zoo,New York,4.6,25000,"{'latitude': 40.8506, 'longitude': -73.8770}",$$$
+Washington Square Park,New York,4.7,23000,"{'latitude': 40.7308, 'longitude': -73.9973}",$
+Carnegie Hall,New York,4.6,22000,"{'latitude': 40.7651, 'longitude': -73.9799}",$$$
+New York Botanical Garden,New York,4.6,24000,"{'latitude': 40.8616, 'longitude': -73.8802}",$$$
+Coney Island,New York,4.5,21000,"{'latitude': 40.5749, 'longitude': -73.9850}",$$

@@ -42,14 +42,21 @@ class TripPlanner:
         transportation = 'walking/public transport' if transportation_choice == '1' else 'taxi'
 
         activities = []
+        activities_costs = []
+        activities_days = []
+
         while True:
             activity = input("Enter an activity or point of interest (or leave blank to finish): ")
             if not activity:
                 break
             activities.append(activity)
+            cost = input(f"Enter the estimated cost in USD for '{activity}': ")
+            trip_day = int(input(f"On which day of your trip do you plan to do '{activity}'?(1,2,3..etc) "))
+            activities_costs.append(cost)
+            activities_days.append(trip_day)
         
-        trip_data = pd.DataFrame([[destination_city,destination_country, stay_days, transportation, budget_range, activities]], 
-                                columns=["destination_city","destination_country","stay_days", "transportation", "budget_range", "activities"])
+        trip_data = pd.DataFrame([[destination_city,destination_country, stay_days, transportation, budget_range, activities, activities_costs,activities_days]], 
+                                columns=["destination_city","destination_country","stay_days", "transportation", "budget_range", "activities", "activities_costs","activities_days"])
         self.trip_details = trip_data
         trip_data.to_csv("trip_details.csv", index=False)
 
@@ -119,6 +126,9 @@ class TripPlanner:
         destination_country =  trip_row['destination_country']
         stay_days = trip_row['stay_days']
         budget_range = trip_row['budget_range']
+        activities = trip_row['activities']
+        activities_costs = trip_row['activities_costs']
+        activities_days = trip_row['activities_days']
         
         # Get attractions for the destination city
         attractions = self.get_attractions_for_city(destination_city)
@@ -163,9 +173,29 @@ class TripPlanner:
                     return 150  # Average price for attractions with 4 $$$$
                 
         suggestions_with_costs['estimated_cost'] = suggestions_with_costs.apply(calculate_estimated_cost, axis=1)
-        suggestions_with_costs = suggestions_with_costs[['type', 'suggestion', 'location', 'price_range', 'rating', 'estimated_cost']]
+        suggestions_with_costs = suggestions_with_costs[['trip_day','type', 'suggestion', 'location', 'price_range', 'rating', 'estimated_cost']]
+
+        # Create dataframe with extra activities added by user
+        activities_data = {
+            'trip_day': activities_days,
+            'type': ['Activity defined by user'] * len(activities),
+            'suggestion': activities,
+            'location': ['' for _ in activities],  # Leave location column empty
+            'price_range': ['' for _ in activities],  # Leave price_range column empty
+            'rating': [None for _ in activities],  # Leave rating column empty
+            'estimated_cost': activities_costs,
+        }
+
+        # Create the DataFrame
+        activities_df = pd.DataFrame(activities_data)
+
+        # Concatenate the sorted suggestions DataFrame with the activities DataFrame
+        combined_df = pd.concat([activities_df, suggestions_with_costs])
+
+        sorted_combined_df = combined_df.sort_values(by="trip_day")
+
         # Save itinerary to a CSV file
-        suggestions_with_costs.to_csv("itinerary.csv", index=False)
+        sorted_combined_df.to_csv("itinerary.csv", index=False)
         print(f"\nItinerary saved to itinerary.csv!")
 
-        return suggestions_with_costs
+        return sorted_combined_df

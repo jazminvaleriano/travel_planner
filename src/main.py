@@ -1,11 +1,11 @@
 from trip_planner import TripPlanner
-#from budget_manager import BudgetManager
+from budget_manager import BudgetManager
 #from data_visualization import DataVisualizer
 
 def main():
     # Initialize objects
     trip_planner = TripPlanner()
-    #budget_manager = BudgetManager()
+    budget_manager = BudgetManager()
     #data_visualizer = DataVisualizer()
     
     # Welcome message
