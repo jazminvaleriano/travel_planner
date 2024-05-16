@@ -1,4 +1,4 @@
-name,rating,num_reviews,location,price_range
+name,city,rating,num_reviews,location,price_range
 Eiffel Tower,Paris,4.5,10000,"{'latitude': 48.8584, 'longitude': 2.2945}",$$ - $$$
 Notre-Dame Cathedral,Paris,4.7,15000,"{'latitude': 48.853, 'longitude': 2.3498}",$
 Montmartre,Paris,4.6,12000,"{'latitude': 48.8867, 'longitude': 2.3431}",$
@@ -16,10 +16,10 @@ Grand Palais,Paris,4.7,16000,"{'latitude': 48.8661, 'longitude': 2.3126}",$$$
 Musée de l'Orangerie,Paris,4.5,10000,"{'latitude': 48.8637, 'longitude': 2.3227}",$$
 Place de la Concorde,Paris,4.6,14000,"{'latitude': 48.8656, 'longitude': 2.3219}",$$
 Île de la Cité,Paris,4.7,17000,"{'latitude': 48.8556, 'longitude': 2.3458}",$$
-Arc de Triomphe,Paris,4.6,14000,"{'latitude': 48.8738, 'longitude': 2.295},$$
+Arc de Triomphe,Paris,4.6,14000,"{'latitude': 48.8738, 'longitude': 2.295}",$$
 Musée Rodin,Paris,4.5,12000,"{'latitude': 48.8552, 'longitude': 2.3159}",$$
 Musée du Louvre,Paris,4.7,18000,"{'latitude': 48.8606, 'longitude': 2.3376}",$$
-Champs-Élysées,Paris,4.6,15000,"{'latitude': 48.8698, 'longitude': 2.307},$$
+Champs-Élysées,Paris,4.6,15000,"{'latitude': 48.8698, 'longitude': 2.307}",$$
 Pantheon,Paris,4.5,12000,"{'latitude': 48.8462, 'longitude': 2.3464}",$$
 Musée de l'Armée,Paris,4.6,13000,"{'latitude': 48.8566, 'longitude': 2.3144}",$$
 Place des Vosges,Paris,4.7,14000,"{'latitude': 48.854, 'longitude': 2.3677}",$$
@@ -29,7 +29,7 @@ Catacombs of Paris,Paris,4.5,14000,"{'latitude': 48.8339, 'longitude': 2.3326}",
 Saint-Sulpice Church,Paris,4.6,15000,"{'latitude': 48.8508, 'longitude': 2.3339}",$$
 Palais-Royal,Paris,4.7,16000,"{'latitude': 48.8649, 'longitude': 2.3377}",$$
 Musée du Louvre,Paris,4.7,18000,"{'latitude': 48.8606, 'longitude': 2.3376}",$$
-Champs-Élysées,Paris,4.6,15000,"{'latitude': 48.8698, 'longitude': 2.307},$$
+Champs-Élysées,Paris,4.6,15000,"{'latitude': 48.8698, 'longitude': 2.307}",$$
 Pantheon,Paris,4.5,12000,"{'latitude': 48.8462, 'longitude': 2.3464}",$$
 Musée de l'Armée,Paris,4.6,13000,"{'latitude': 48.8566, 'longitude': 2.3144}",$$
 Place des Vosges,Paris,4.7,14000,"{'latitude': 48.854, 'longitude': 2.3677}",$$
@@ -67,7 +67,7 @@ Trafalgar Square,London,4.7,19000,"{'latitude': 51.508, 'longitude': -0.1281}",$
 National Maritime Museum,London,4.5,14000,"{'latitude': 51.4806, 'longitude': -0.0057}",$$
 Tate Britain,London,4.6,17000,"{'latitude': 51.491, 'longitude': -0.1276}",$$$
 The Serpentine,London,4.7,18000,"{'latitude': 51.5077, 'longitude': -0.1658}",$$
-Royal Botanic Gardens,Kew,London,4.6,16000,"{'latitude': 51.4785, 'longitude': -0.295}",$$
+Royal Botanic Gardens Kew,London,4.6,16000,"{'latitude': 51.4785, 'longitude': -0.295}",$$
 Cutty Sark,London,4.5,15000,"{'latitude': 51.4822, 'longitude': -0.0095}",$$$
 Statue of Liberty,New York,4.7,17000,"{'latitude': 40.6892, 'longitude': -74.0445}",$$ - $$$
 Central Park,New York,4.8,19000,"{'latitude': 40.7851, 'longitude': -73.9683}",$
@@ -90,11 +90,11 @@ Staten Island Ferry,New York,4.5,14000,"{'latitude': 40.6892, 'longitude': -74.0
 Madison Square Garden,New York,4.6,16000,"{'latitude': 40.7505, 'longitude': -73.9934}",$$$
 The Guggenheim Museum,New York,4.7,18000,"{'latitude': 40.7829, 'longitude': -73.9589}",$$$
 Broadway Theatre District,New York,4.6,15000,"{'latitude': 40.758, 'longitude': -73.9855}",$$$
-Coney Island,New York,4.5,14000,"{'latitude': 40.5749, 'longitude': -73.985},$$$
+Coney Island,New York,4.5,14000,"{'latitude': 40.5749, 'longitude': -73.985}",$$$
 New York Botanical Garden,New York,4.6,16000,"{'latitude': 40.8633, 'longitude': -73.8779}",$$$
 Ellis Island,New York,4.5,14000,"{'latitude': 40.6997, 'longitude': -74.0393}",$$
 Radio Music Hall,New York,4.6,16000,"{'latitude': 40.759, 'longitude': -73.9793}",$$$
-Intrepid Sea, Air & Space Museum,New York,4.7,18000,"{'latitude': 40.7646, 'longitude': -73.9996}",$$$
+Intrepid Sea Air & Space Museum,New York,4.7,18000,"{'latitude': 40.7646, 'longitude': -73.9996}",$$$
 The Frick Collection,New York,4.6,15000,"{'latitude': 40.7707, 'longitude': -73.9675}",$$$
 South Street Seaport,New York,4.5,14000,"{'latitude': 40.7069, 'longitude': -74.0035}",$$
 Gantry Plaza State Park,New York,4.6,16000,"{'latitude': 40.7468, 'longitude': -73.9567}",$$

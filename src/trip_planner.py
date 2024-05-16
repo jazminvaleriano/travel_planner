@@ -11,6 +11,10 @@ class TripPlanner:
         print("\nTrip Planner:")
         destination_city = input("Where would you like to go? Enter the name of the city: ")
         stay_days = int(input("How many days do you plan to stay? "))
+        # Retrieve country from city
+        # Load touristic cities data
+        world_cities = pd.read_csv("data/worldcities.csv")
+        destination_country = world_cities.loc[world_cities['city'] == destination_city, 'country'].iloc[0]
 
         # Menu for budget range
         while True:
@@ -44,11 +48,6 @@ class TripPlanner:
                 break
             activities.append(activity)
         
-        # Retrieve country from city
-        # Load touristic cities data
-        world_cities = pd.read_csv("data/worldcities.csv")
-        destination_country = world_cities.loc[world_cities['city'] == destination_city, 'country'].iloc[0]
-
         trip_data = pd.DataFrame([[destination_city,destination_country, stay_days, transportation, budget_range, activities]], 
                                 columns=["destination_city","destination_country","stay_days", "transportation", "budget_range", "activities"])
         self.trip_details = trip_data
@@ -111,13 +110,13 @@ class TripPlanner:
         # Add trip day column
         selected_restaurants['trip_day'] = trip_days
 
-        
         return selected_restaurants
     
     def generate_itinerary(self):
         suggestions = []
         trip_row = self.trip_details.iloc[-1]  # Accessing the most recent trip details
         destination_city = trip_row['destination_city']
+        destination_country = trip_row['destination_country']
         stay_days = trip_row['stay_days']
         budget_range = trip_row['budget_range']
         
@@ -131,12 +130,28 @@ class TripPlanner:
         restaurants = self.get_restaurants_for_city(destination_city, budget_range)
         selected_restaurants = self.select_restaurants(restaurants, stay_days)
         for _, restaurant in selected_restaurants.iterrows():
-            suggestions.append(["Restaurant", restaurant['name'], restaurant['location'], restaurant['price_range'], restaurant['rating'], restaurant['trip_day']])
-
-        suggested_itinerary_df = pd.DataFrame(suggestions, columns=["type", "suggestion", "location", "price range", "rating","trip_day"])
+            suggestions.append(["Restaurant",destination_country, restaurant['name'], restaurant['location'], restaurant['price_range'], restaurant['rating'], restaurant['trip_day']])
+        
+        # Convert suggestions to DataFrame
+        suggestions_df = pd.DataFrame(suggestions, columns=["type", "Country","suggestion", "location", "price range", "rating", "trip_day"])
+    
+        # Merge with the DataFrame containing country-wise meal prices
+        meal_prices_df = pd.read_csv("data/CountrySpecific_RestaurantCost.csv")  
+        suggestions_with_costs = pd.merge(suggestions_df, meal_prices_df, left_on='location', right_on='Country', how='left')
+            
+        # Calculate estimated cost per meal based on price range and country
+        def calculate_estimated_cost(row):
+            if row['price range'] == 'high':
+                return row['Price'] * 2.5  
+            elif row['price range'] == 'med':
+                return row['Price'] * 1.5  
+            else:
+                return row['Price']  # DataFrame contains data for low budget meals
+        
+        suggestions_with_costs['estimated_cost_per_meal'] = suggestions_with_costs.apply(calculate_estimated_cost, axis=1)
+        
         # Save itinerary to a CSV file
-        suggested_itinerary_df.to_csv("itinerary.csv", index=False)
+        suggestions_with_costs.to_csv("itinerary.csv", index=False)
         print(f"\nItinerary saved to itinerary.csv!")
 
-        return suggested_itinerary_df
-   
+        return suggestions_with_costs

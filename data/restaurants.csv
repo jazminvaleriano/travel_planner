@@ -88,3 +88,19 @@ Del Posto,New York,4.7,4800,"{'latitude': 40.7421, 'longitude': -74.0075}",$$$
 Balthazar,New York,4.4,4100,"{'latitude': 40.7244, 'longitude': -73.9975}",$$
 Momofuku Noodle Bar,New York,4.3,4000,"{'latitude': 40.7292, 'longitude': -73.9842}",$$
 Gramercy Tavern,New York,4.5,4300,"{'latitude': 40.7385, 'longitude': -73.9887}",$$
+La Crêperie Parisienne,Paris,4.2,2300,"{'latitude': 48.8724, 'longitude': 2.3549}",$
+Le Bouchon Français,Paris,4.3,2400,"{'latitude': 48.8745, 'longitude': 2.3587}",$
+Café des Artistes,Paris,4.1,2200,"{'latitude': 48.8679, 'longitude': 2.3465}",$
+La Brasserie du Marais,Paris,4.0,2100,"{'latitude': 48.8582, 'longitude': 2.3639}",$
+Au Petit Parisien,Paris,4.2,2300,"{'latitude': 48.8615, 'longitude': 2.3458}",$
+Le Petit Bistroquet,Paris,4.3,2400,"{'latitude': 48.8642, 'longitude': 2.3501}",$
+La Boulangerie du Quartier,Paris,4.1,2200,"{'latitude': 48.8682, 'longitude': 2.3573}",$
+Chez Marie,Paris,4.0,2100,"{'latitude': 48.8706, 'longitude': 2.3529}",$
+The Pie & Mash Shop,London,4.2,2300,"{'latitude': 51.5118, 'longitude': -0.1314}",$
+The British Roast Co.,London,4.3,2400,"{'latitude': 51.5159, 'longitude': -0.1325}",$
+The Fish & Chips Place,London,4.1,2200,"{'latitude': 51.5172, 'longitude': -0.1347}",$
+The Pudding Parlor,London,4.0,2100,"{'latitude': 51.5183, 'longitude': -0.1369}",$
+The Tea Room,London,4.2,2300,"{'latitude': 51.5194, 'longitude': -0.1391}",$
+The Fry-Up Spot,London,4.3,2400,"{'latitude': 51.5205, 'longitude': -0.1413}",$
+The Pub Grub Hub,London,4.1,2200,"{'latitude': 51.5216, 'longitude': -0.1435}",$
+The Snack Shack,London,4.0,2100,"{'latitude': 51.5227, 'longitude': -0.1457}",$

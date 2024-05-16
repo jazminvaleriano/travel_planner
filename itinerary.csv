@@ -1,9 +1,9 @@
-type,suggestion,location,price range,rating,trip_day
-Attraction,,,,,1
-Attraction,,,,,2
-Attraction,,,,,1
-Attraction,,,,,2
-Restaurant,,,,,1
-Restaurant,,,,,2
-Restaurant,,,,,1
-Restaurant,,,,,2
+type,destination_country,suggestion,location,price range,rating,trip_day,Country,Price,estimated_cost_per_meal
+Attraction,Seine River Cruise,"{'latitude': 48.8584, 'longitude': 2.3526}",$$,4.8,1.0,,,,
+Attraction,Luxembourg Gardens,"{'latitude': 48.8462, 'longitude': 2.3372}",$,4.7,2.0,,,,
+Attraction,Musée du Louvre,"{'latitude': 48.8606, 'longitude': 2.3376}",$$,4.7,1.0,,,,
+Attraction,Musée du Louvre,"{'latitude': 48.8606, 'longitude': 2.3376}",$$,4.7,2.0,,,,
+Restaurant,France,Le Bouchon Français,"{'latitude': 48.8745, 'longitude': 2.3587}",$,4.3,1.0,,,
+Restaurant,France,Le Petit Bistroquet,"{'latitude': 48.8642, 'longitude': 2.3501}",$,4.3,2.0,,,
+Restaurant,France,Café de la Seine,"{'latitude': 48.8612, 'longitude': 2.3518}",$,4.2,1.0,,,
+Restaurant,France,La Petite Auberge,"{'latitude': 48.8547, 'longitude': 2.3406}",$,4.2,2.0,,,
