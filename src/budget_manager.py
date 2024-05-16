@@ -96,12 +96,23 @@ class BudgetManager:
         try:
             category = input("Enter the category of expense (e.g., Accommodation, Food, Transport, etc.): ")
             amount = float(input(f"Enter the amount spent on {category}: "))
-            # Add the expense to the expenses DataFrame
-            new_expense = pd.DataFrame({"Category": [category], "Amount": [amount]})
-            self.expenses = pd.concat([self.expenses, new_expense], ignore_index=True)
-            print(f"Added expense: {category} - ${amount}")
+            
+            # Check if expenses DataFrame is empty
+            if self.expenses.empty:
+                # If expenses DataFrame is empty, directly assign the new_expense DataFrame
+                self.expenses = pd.DataFrame({"Category": [category], "Amount": [amount]})
+            else:
+                # If expenses DataFrame is not empty, concatenate new_expense DataFrame
+                new_expense = pd.DataFrame({"Category": [category], "Amount": [amount]})
+                self.expenses = pd.concat([self.expenses, new_expense], ignore_index=True)
+            
+            # Save expenses to expenses.csv
+            self.expenses.to_csv('expenses.csv', index=False)
+                
+            print(f"Added expense for: {category} - ${amount} successfully. See expense.csv for details per category.")
         except ValueError:
-            print("Invalid input. Please enter a number for the amount.")
+            print("Invalid input. Please enter a valid numerical amount for the expense.")
+            
         
     def view_budget_and_expenses(self):
         # Show the user the budget and tracked expenses
