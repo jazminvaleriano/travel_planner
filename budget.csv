@@ -1,4 +1,5 @@
-Category,Budget
-Activities,138.0
-Food,300.0
-Transportation,20.0
+Trip Day,Category,Budget
+1.0,Attraction,90.0
+1.0,Restaurant,132.44
+2.0,Attraction,76.0
+2.0,Restaurant,132.44

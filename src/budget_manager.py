@@ -2,10 +2,10 @@ import pandas as pd
 import os
 
 class BudgetManager:
-    def __init__(self):
+    def _init_(self):
         # Setting up an empty budget and empty dataframe for expenses
         self.budget = None
-        self.expenses = pd.DataFrame(columns=["Trip Day","Category", "Amount"])
+        self.expenses = pd.DataFrame(columns=["Trip Day", "Category", "Amount"])
 
     def manage_budget(self):
         # Create a menu for budget management and for handling the user's choice
@@ -41,79 +41,67 @@ class BudgetManager:
                     # If the file exists, read it
                     itinerary_df = pd.read_csv("itinerary.csv")
                     print("Itinerary loaded successfully.")
-                    # Extract the total budget by category from the loaded itinerary
-                    budget_activities = itinerary_df[(itinerary_df['category'] == 'Attraction') | (itinerary_df['category'] == 'Activity defined by user')]["estimated_cost"].sum()
-                    budget_food = itinerary_df[itinerary_df['category'] == 'Restaurant']["estimated_cost"].sum()
-
+                    budget_days = []
+                    trip_days = sorted(itinerary_df['trip_day'].unique())
+                    for day in trip_days:
+                        day_df = itinerary_df[itinerary_df['trip_day'] == day]
+                        for category in ['Attraction', 'Restaurant']:
+                            category_budget = day_df[day_df['category'] == category]['estimated_cost'].sum()
+                            budget_days.append({'Trip Day': day, 'Category': category, 'Budget': category_budget})
                 else:
-                    budget_activities = float(input("Enter your total budget for activities the trip: "))
-                    budget_food = float(input("Enter your total budget for food the trip: "))
+                    print("Itinerary file does not exist. Please enter the budget manually.")
+                    return
 
             else:
-                budget_activities = float(input("Enter your total budget for activities the trip: "))
-                budget_food = float(input("Enter your total budget for food the trip: "))
-        
-            # Read trip details to get destination country and stay days
-            trip_details_df = pd.read_csv("trip_details.csv")
-            destination_country = trip_details_df['destination_country'].iloc[0]
-            stay_days = trip_details_df['stay_days'].iloc[0]
-            transportation_mode = trip_details_df['transportation'].iloc[0]
+                budget_activities = float(input("Enter your total budget for activities for the trip: "))
+                budget_food = float(input("Enter your total budget for food for the trip: "))
+                budget_transportation = float(input("Enter your total budget for transportation for the trip: "))
 
-            # Read transportation cost for public transport based on destination country
+                # Read trip details to get stay days
+                trip_details_df = pd.read_csv("trip_details.csv")
+                stay_days = trip_details_df['stay_days'].iloc[0]
 
-            if transportation_mode.lower() == 'walking/public transport':
-                transportation_cost_df = pd.read_csv("data/CountrySpecific_TransportationCost.csv")
-                transportation_cost = transportation_cost_df.loc[transportation_cost_df['Country'] == destination_country, 'Public Transportation Cost (USD)'].iloc[0]
-            else:
-                transportation_cost = 100  # Assume $100 per day if transportation mode is taxi 
-
-            # Calculate transportation budget
-            budget_transportation = transportation_cost * stay_days * 4  # Assuming an average of 4 one way rides per day for public transport
+                # Create budget per day
+                budget_days = []
+                for day in range(1, stay_days + 1):
+                    budget_days.append({'Trip Day': day, 'Category': 'Activities', 'Budget': budget_activities / stay_days})
+                    budget_days.append({'Trip Day': day, 'Category': 'Food', 'Budget': budget_food / stay_days})
+                    budget_days.append({'Trip Day': day, 'Category': 'Transportation', 'Budget': budget_transportation / stay_days})
             
-            # Store budget details in a DataFrame
-            budget_data = {
-                'Category': ['Activities', 'Food', 'Transportation'],  # Include Transportation category
-                'Budget': [budget_activities, budget_food, budget_transportation]  # Include transportation_budget
-            }
-            budget_df = pd.DataFrame(budget_data)
-
-            # Save the budget DataFrame to a CSV file
+            # Convert to DataFrame and save to CSV
+            budget_df = pd.DataFrame(budget_days)
             budget_df.to_csv('budget.csv', index=False)
 
-            self.budget_food = budget_food
-            self.budget_activities = budget_activities
-            self.budget_transportation = budget_transportation
-            
-            # Calculate total budget correctly
-            self.budget = sum([budget_activities, budget_food, budget_transportation])
+            # Summarize the budget
+            self.budget = budget_df['Budget'].sum()
 
-            print(f"Budget of ${self.budget} created successfully. See budget.csv for details per category.")
+            print(f"Budget created successfully. See budget.csv for details per category and per day.")
         except ValueError:
             print("Invalid input. Please enter a number for the budget.")
 
     def track_expense(self):
-    # Request the user to enter details of a new expense
+        # Request the user to enter details of a new expense
         try:
+            trip_day = float(input("Enter the trip day: "))
             category = input("Enter the category of expense (e.g., Accommodation, Food, Transport, etc.): ")
             amount = float(input(f"Enter the amount spent on {category}: "))
             
             # Check if expenses DataFrame is empty
             if self.expenses.empty:
                 # If expenses DataFrame is empty, directly assign the new_expense DataFrame
-                self.expenses = pd.DataFrame({"Category": [category], "Amount": [amount]})
+                self.expenses = pd.DataFrame({"Trip Day": [trip_day], "Category": [category], "Amount": [amount]})
             else:
                 # If expenses DataFrame is not empty, concatenate new_expense DataFrame
-                new_expense = pd.DataFrame({"Category": [category], "Amount": [amount]})
+                new_expense = pd.DataFrame({"Trip Day": [trip_day], "Category": [category], "Amount": [amount]})
                 self.expenses = pd.concat([self.expenses, new_expense], ignore_index=True)
             
             # Save expenses to expenses.csv
             self.expenses.to_csv('expenses.csv', index=False)
                 
-            print(f"Added expense for: {category} - ${amount} successfully. See expense.csv for details per category.")
+            print(f"Added expense for: {category} - ${amount} on trip day {trip_day} successfully. See expense.csv for details per category and per day.")
         except ValueError:
             print("Invalid input. Please enter a valid numerical amount for the expense.")
             
-        
     def view_budget_and_expenses(self):
         # Show the user the budget and tracked expenses
         if self.budget is None:
@@ -132,5 +120,3 @@ class BudgetManager:
         total_spent = self.expenses["Amount"].sum()
         print(f"\nTotal Spent: ${total_spent}")
         print(f"Remaining Budget: ${self.budget - total_spent}")
-
-
