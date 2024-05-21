@@ -33,7 +33,7 @@ class BudgetManager:
         # Function to create a budget for the trip
         try:
             # Ask the user if they want to use the generated itinerary or enter manually
-            choice = input("Do you want to use the generated itinerary? (yes/no): ").lower()
+            choice = input("Do you want to use the generated itinerary to get a budget estimate? If not, the costs need to be entered manually (yes/no): ").lower()
             
             if choice == 'yes':
                 # Check if itinerary.csv exists
@@ -48,6 +48,24 @@ class BudgetManager:
                         for category in ['Attraction', 'Restaurant']:
                             category_budget = day_df[day_df['category'] == category]['estimated_cost'].sum()
                             budget_days.append({'Trip Day': day, 'Category': category, 'Budget': category_budget})
+                    
+                    # Read trip details to get destination country, stay days, and transportation mode
+                    trip_details_df = pd.read_csv("trip_details.csv")
+                    destination_country = trip_details_df['destination_country'].iloc[0]
+                    stay_days = trip_details_df['stay_days'].iloc[0]
+                    transportation_mode = trip_details_df['transportation'].iloc[0]
+                    
+                    # Calculate transportation budget
+                    if transportation_mode.lower() == 'walking/public transport':
+                        transportation_cost_df = pd.read_csv("data/CountrySpecific_TransportationCost.csv")
+                        transportation_cost = transportation_cost_df.loc[transportation_cost_df['Country'] == destination_country, 'Public Transportation Cost (USD)'].iloc[0]
+                        budget_transportation = transportation_cost * stay_days * 4  # Assuming an average of 4 one way rides per day for public transport
+                    else:
+                        budget_transportation = 100 * stay_days  # Assume $100 per day if transportation mode is taxi
+                    
+                    for day in range(1, stay_days + 1):
+                        budget_days.append({'Trip Day': day, 'Category': 'Transportation', 'Budget': budget_transportation / stay_days})
+                
                 else:
                     print("Itinerary file does not exist. Please enter the budget manually.")
                     return

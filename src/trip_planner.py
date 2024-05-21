@@ -162,7 +162,7 @@ class TripPlanner:
 
         activities_data = {
             'trip_day': activities_days,
-            'category': ['Activity defined by user'] * len(activities),
+            'category': ['custom_activity'] * len(activities),
             'suggestion': activities,
             'location': ['' for _ in activities],
             'price_range': ['' for _ in activities],
