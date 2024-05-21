@@ -13,20 +13,25 @@ class TripPlanner:
     def plan_trip(self):
         print("\nTrip Planner:")
         
-        available_cities = self.restaurants_data['city'].unique()
+        # Normalize city names to lowercase for comparison
+        available_cities = self.restaurants_data['city'].str.lower().unique()
+        available_cities = self.attractions_data['city'].str.lower().unique()
+        
         
         while True:
-            destination_city = input("Where would you like to go? Enter the name of the city: ")
-            if destination_city in available_cities:
+            try:
+                destination_city = input("Where would you like to go? Enter the name of the city: ").strip()
+                if destination_city.lower() not in available_cities: # Converting to lowercase to allow for search in dataset
+                    raise CityNotFoundError(f"Error: {destination_city} is not available in our data. Please choose a different city.")
                 break
-            else:
-                print(f"Error: {destination_city} is not available in our data. Please choose a different city.")
+            except CityNotFoundError as e:
+                print(e)
         
         stay_days = int(input("How many days do you plan to stay? "))
         
-        # Retrieve country from city
+        # Retrieve country from city using a case-insensitive match
         world_cities = pd.read_csv("data/worldcities.csv")
-        destination_country = world_cities.loc[world_cities['city'] == destination_city, 'country'].iloc[0]
+        destination_country = world_cities.loc[world_cities['city'].str.lower() == destination_city.lower(), 'country'].iloc[0]
 
         # Menu for budget range
         while True:
@@ -78,7 +83,7 @@ class TripPlanner:
         return self.trip_details
         
     def get_attractions_for_city(self, city):
-        attractions = self.attractions_data[self.attractions_data['city'] == city][:]
+        attractions = self.attractions_data[self.attractions_data['city'].str.lower() == city.lower()][:]
         return attractions
 
     def select_attractions(self, attractions, stay_days):
@@ -90,7 +95,7 @@ class TripPlanner:
         return selected_attractions
     
     def get_restaurants_for_city(self, city, budget_range):
-        restaurants = self.restaurants_data[self.restaurants_data['city'] == city][:]
+        restaurants = self.restaurants_data[self.restaurants_data['city'].str.lower() == city.lower()][:]
         if budget_range == 'low':
             restaurants = restaurants[restaurants['price_range'] == '$']
         elif budget_range == 'med':
@@ -172,3 +177,4 @@ class TripPlanner:
         print(f"\nItinerary saved to itinerary.csv!")
 
         return sorted_combined_df
+

@@ -1,5 +1,9 @@
 trip_day,category,suggestion,location,price_range,rating,estimated_cost
 1.0,Attraction,Hyde Park,"{'latitude': 51.5073, 'longitude': -0.1657}",$,4.7,15.0
-1.0,Attraction,National Gallery,"{'latitude': 51.5089, 'longitude': -0.1283}",$$,4.7,38.0
-1.0,Restaurant,The British Roast Co.,"{'latitude': 51.5159, 'longitude': -0.1325}",$,4.3,18.92
-1.0,Restaurant,The Fry-Up Spot,"{'latitude': 51.5205, 'longitude': -0.1413}",$,4.3,18.92
+1.0,Attraction,Windsor Castle,"{'latitude': 51.4839, 'longitude': -0.6043}",$$$,4.7,75.0
+1.0,Restaurant,Core by Clare Smyth,"{'latitude': 51.5149, 'longitude': -0.2017}",$$$$,4.9,66.22
+1.0,Restaurant,Dinner by Heston Blumenthal,"{'latitude': 51.5015, 'longitude': -0.1592}",$$$$,4.8,66.22
+2.0,Attraction,National Gallery,"{'latitude': 51.5089, 'longitude': -0.1283}",$$,4.7,38.0
+2.0,Attraction,Trafalgar Square,"{'latitude': 51.508, 'longitude': -0.1281}",$$,4.7,38.0
+2.0,Restaurant,Restaurant Gordon Ramsay,"{'latitude': 51.4851, 'longitude': -0.1624}",$$$$,4.9,66.22
+2.0,Restaurant,The River Café,"{'latitude': 51.4847, 'longitude': -0.2089}",$$$$,4.8,66.22
