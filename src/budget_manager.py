@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 class BudgetManager:
-    def _init_(self):
+    def __init__(self):
         # Setting up an empty budget and empty dataframe for expenses
         self.budget = None
         self.expenses = pd.DataFrame(columns=["Trip Day", "Category", "Amount"])
