@@ -9,7 +9,8 @@ Please note that for the moment we're unable to access real-time data from trave
 
 If the instructions and recommendations are followed, TripTrek is able to:
 - Generate a suggested itinerary in .csv for the duration of your trip including attractions, restaurants, and optionally activities added manually by the user, along with costs estimates.
-- Generate a budget csv file organized by category including both data from the suggested itinerary or entered manually by user. 
+- Generate a budget csv file organized by category including both data from the suggested itinerary or entered manually by user.
+- Generate an expenses csv file listing the category and expense.
 
 ## Goal Features
 * **Customizable Itineraries**: Users can specify their destination city, travel preferences and schedule. TripTrek Itinerary Generator will organize your activities efficiently, and estimate your trip costs, maximizing your time and enjoyment.
@@ -55,7 +56,7 @@ To run the interface, follow these steps:
 ## Contributors
 
 * Merlyne Lawrence [@MerNLP](https://github.com/MerNLP)
-* Kamdoum Kemfio Hans [@MerNLP](https://github.com/MerNLP)
+* Kamdoum Kemfio Hans [@AssadeckAitock](https://github.com/AssadeckAitock)
 * Assadeck Moussa Aitock [@kmaritinion](https://github.com/kmartinion)
 * Jazmin Valeriano [@jazminvaleriano](https://github.com/jazminvaleriano)
 
