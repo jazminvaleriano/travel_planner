@@ -1,10 +1,5 @@
 trip_day,category,suggestion,location,price_range,rating,estimated_cost
-1,Activity defined by user,adj,,,,32
-1,Attraction,Central Park,"{'latitude': 40.7851, 'longitude': -73.9683}",$,4.8,15.0
-1,Attraction,Central Park,"{'latitude': 40.7851, 'longitude': -73.9683}",$,4.8,15.0
-1,Restaurant,Eleven Madison Park,"{'latitude': 40.7419, 'longitude': -73.9876}",$$$$$,4.9,80.0
-1,Restaurant,Daniel,"{'latitude': 40.7663, 'longitude': -73.9679}",$$$$,4.8,70.0
-2,Attraction,Metropolitan Museum of Art,"{'latitude': 40.7794, 'longitude': -73.9632}",$$,4.8,38.0
-2,Attraction,Metropolitan Museum of Art,"{'latitude': 40.7794, 'longitude': -73.9632}",$$,4.8,38.0
-2,Restaurant,Per Se,"{'latitude': 40.7685, 'longitude': -73.9825}",$$$$$,4.8,80.0
-2,Restaurant,Jean-Georges,"{'latitude': 40.7698, 'longitude': -73.9817}",$$$$,4.8,70.0
+1.0,Attraction,Hyde Park,"{'latitude': 51.5073, 'longitude': -0.1657}",$,4.7,15.0
+1.0,Attraction,National Gallery,"{'latitude': 51.5089, 'longitude': -0.1283}",$$,4.7,38.0
+1.0,Restaurant,The British Roast Co.,"{'latitude': 51.5159, 'longitude': -0.1325}",$,4.3,18.92
+1.0,Restaurant,The Fry-Up Spot,"{'latitude': 51.5205, 'longitude': -0.1413}",$,4.3,18.92
