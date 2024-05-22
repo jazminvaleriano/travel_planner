@@ -1,2 +1,2 @@
 destination_city,destination_country,stay_days,transportation,budget_range,activities,activities_costs,activities_days
-Paris,France,3,walking/public transport,med,[],[],[]
+London,United Kingdom,3,taxi,high,['Seine walk'],['5'],[2]

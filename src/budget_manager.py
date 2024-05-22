@@ -45,10 +45,19 @@ class BudgetManager:
                     trip_days = sorted(itinerary_df['trip_day'].unique())
                     for day in trip_days:
                         day_df = itinerary_df[itinerary_df['trip_day'] == day]
-                        for category in ['Attraction', 'Restaurant']:
-                            category_budget = day_df[day_df['category'] == category]['estimated_cost'].sum()
-                            budget_days.append({'Trip Day': day, 'Category': category, 'Budget': category_budget})
-                    
+                        # Append costs of food
+                        category_budget = day_df[day_df['category'] == 'Restaurant']['estimated_cost'].sum()
+                        budget_days.append({'Trip Day': day, 'Category': 'Food', 'Budget': category_budget})
+
+                        # Append costs of activities
+                        category_budget = day_df[day_df['category'].isin(['Attraction', 'custom_activity'])]['estimated_cost'].sum()
+                        budget_days.append({'Trip Day': day, 'Category': 'Activities', 'Budget': category_budget})
+
+                        #for category in ['Attraction', 'custom_activity']:
+                        #    category_budget = day_df[day_df['category'] == category]['estimated_cost'].sum()
+                        #    budget_days.append({'Trip Day': day, 'Category': category, 'Budget': category_budget})
+
+
                     # Read trip details to get destination country, stay days, and transportation mode
                     trip_details_df = pd.read_csv("trip_details.csv")
                     destination_country = trip_details_df['destination_country'].iloc[0]
@@ -99,27 +108,33 @@ class BudgetManager:
 
     def track_expense(self):
         # Request the user to enter details of a new expense
+        allowed_categories = ['food', 'transport', 'activities', 'others']
+        
         try:
             trip_day = float(input("Enter the trip day: "))
-            category = input("Enter the category of expense (e.g., Accommodation, Food, Transport, etc.): ")
-            amount = float(input(f"Enter the amount spent on {category}: "))
+            category = input("Enter the category of expense (Food, Transport, Activities, Others): ").strip().lower()
+            
+            if category not in allowed_categories:
+                raise ValueError(f"Invalid category. Allowed categories are: {', '.join([cat.capitalize() for cat in allowed_categories])}")
+            
+            amount = float(input(f"Enter the amount spent on {category.capitalize()}: "))
             
             # Check if expenses DataFrame is empty
             if self.expenses.empty:
                 # If expenses DataFrame is empty, directly assign the new_expense DataFrame
-                self.expenses = pd.DataFrame({"Trip Day": [trip_day], "Category": [category], "Amount": [amount]})
+                self.expenses = pd.DataFrame({"Trip Day": [trip_day], "Category": [category.capitalize()], "Amount": [amount]})
             else:
                 # If expenses DataFrame is not empty, concatenate new_expense DataFrame
-                new_expense = pd.DataFrame({"Trip Day": [trip_day], "Category": [category], "Amount": [amount]})
+                new_expense = pd.DataFrame({"Trip Day": [trip_day], "Category": [category.capitalize()], "Amount": [amount]})
                 self.expenses = pd.concat([self.expenses, new_expense], ignore_index=True)
             
             # Save expenses to expenses.csv
             self.expenses.to_csv('expenses.csv', index=False)
                 
-            print(f"Added expense for: {category} - ${amount} on trip day {trip_day} successfully. See expense.csv for details per category and per day.")
-        except ValueError:
-            print("Invalid input. Please enter a valid numerical amount for the expense.")
-            
+            print(f"Added expense for: {category.capitalize()} - ${amount} on trip day {trip_day} successfully. See expenses.csv for details per category and per day.")
+        except ValueError as e:
+            print(e)
+
     def view_budget_and_expenses(self):
         # Show the user the budget and tracked expenses
         if self.budget is None:

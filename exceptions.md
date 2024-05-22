@@ -1,18 +1,16 @@
 # Exception Handling in TripPlanner
 
-## Rationale for Exception Handling
+## Overview
 
-In the TripPlanner class, we have implemented an exception handling block to ensure that users can only input cities that are available in the data/restaurants.csv file, as this is the dataset with the least number of cities availables in our data folder. Having this restriction is important for several reasons:
+This document describes the exceptions handled in our project to ensure robust and user-friendly operation.
 
-1. *Data Integrity*: Ensuring that the input city exists in our dataset helps maintain the integrity of the trip planning process. If a user enters a city that is not in our data, the program might fail when trying to access non-existent data, leading to crashes or incorrect outputs.
+## Exceptions
 
-2. *User Experience*: By handling this exception, we can provide meaningful feedback to the user. Instead of the program crashing or producing incorrect results, the user is informed that the city is not available and prompted to enter a different city.
+### City Validation Exception
 
-3. *Error Prevention*: Preventing invalid inputs at an early stage helps avoid potential errors later in the program. This makes the code more robust and easier to maintain.
+**Purpose and rationale**: Ensure the input city exists in the dataset to maintain data integrity and provide a smooth user experience. We use restaurants.csv as the limiting dataframe, as this is the dataset with the least number of cities availables in our data folder.
 
-## Implementation Details
-
-The exception handling is implemented in the plan_trip method. Here's a snippet of the relevant code:
+**Implementation**:
 
 ```python
 def plan_trip(self):
@@ -31,3 +29,34 @@ def plan_trip(self):
     world_cities = pd.read_csv("data/worldcities.csv")
     destination_country = world_cities.loc[world_cities['city'] == destination_city, 'country'].iloc[0]
     # Rest of the method...
+```
+
+### Category Validation Exception
+***Purpose and rationale***: Restrict expense categories to a predefined list to ensure data consistency and prevent errors. We want to ensure expense categories can be matched to budget categories to allow for comparison.
+
+***Implementation***:
+
+    ```python
+    def track_expense(self):
+        allowed_categories = ['food', 'transport', 'activities', 'others']
+        
+        try:
+            trip_day = float(input("Enter the trip day: "))
+            category = input("Enter the category of expense (Food, Transport, Activities, Others): ").strip().lower()
+            
+            if category not in [cat.lower() for cat in allowed_categories]:
+                raise ValueError(f"Invalid category. Allowed categories are: {', '.join([cat.capitalize() for cat in allowed_categories])}")
+            
+            amount = float(input(f"Enter the amount spent on {category.capitalize()}: "))
+            
+            if self.expenses.empty:
+                self.expenses = pd.DataFrame({"Trip Day": [trip_day], "Category": [category.capitalize()], "Amount": [amount]})
+            else:
+                new_expense = pd.DataFrame({"Trip Day": [trip_day], "Category": [category.capitalize()], "Amount": [amount]})
+                self.expenses = pd.concat([self.expenses, new_expense], ignore_index=True)
+            
+            self.expenses.to_csv('expenses.csv', index=False)
+            print(f"Added expense for: {category.capitalize()} - ${amount} on trip day {trip_day} successfully. See expense.csv for details per category and per day.")
+        except ValueError as e:
+            print(e)
+    ```
