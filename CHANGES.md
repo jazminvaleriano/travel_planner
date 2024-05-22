@@ -2,31 +2,21 @@
 
 All notable changes to TripTrek will be documented in this file.
 
-## [1.0.2] - 2024-05-22
+## [1.0.1] - 2024-05-22
+
 ### Added
-- `data_visualization.py` for users to analyze travel patterns.
-
-### Changed 
-- Modified `main.py` to import `DataVisualizer`.
-
-
-## [1.0.1] - 2024-05-21
-### Added
-- Exception to ensure that users can only input cities that are available in the data/restaurants.csv file. 
-- Data visualization option enabled to generate a timeline and an expense by category graph.  
-- Case-insensitive city input handling to improve user experience.
-- Added a column to the budget DataFrame to calculate and display the budget per day.
+- Data visualization option enabled on `data_visualization.py` to generate a timeline and an expense by category graph, for users to analyze travel patterns.
+- Exceptions to ensure that users can only input cities that are available in the data/restaurants.csv file, and to validate expense categories. 
+- Case-insensitive input handling to improve user experience.
+- Added a column to the budget DataFrame to calculate and display the budget per day, and sum it by category.
 
 
 ### Changed
 - Modified plan_trip method to normalize user input for city names.
-- Updated get_attractions_for_city and get_restaurants_for_city methods to perform case-insensitive matching for city names.
-- Adjusted the retrieval of the destination country to be case-insensitive.
+- Updated get_attractions_for_city, get_restaurants_for_city, and get_country methods to perform case-insensitive matching for city names.
 - Modified create_budget method to include 'Budget' and 'Trip Day' columns in the budget DataFrame.
     - In the `create_budget` method, the logic was added to create a `Trip Day` column based on the unique trip days from `itinerary.csv`. This includes creating a DataFrame for each day with the budget per day for activities, food, and transportation.
     - If the itinerary does not exist, the user is asked to manually input the budget for activities, food, and transportation. The budget per day is then calculated and added to the `budget_days` list.
-- Updated track_expense method to include 'Trip Day' for each expense tracked.
-
 
 
 ## [1.0.0] - 2024-05-16
