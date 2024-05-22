@@ -2,6 +2,14 @@
 
 All notable changes to TripTrek will be documented in this file.
 
+## [1.0.2] - 2024-05-22
+### Added
+- `data_visualization.py` for users to analyze travel patterns.
+
+### Changed 
+- Modified `main.py` to import `DataVisualizer`.
+
+
 ## [1.0.1] - 2024-05-21
 ### Added
 - Exception to ensure that users can only input cities that are available in the data/restaurants.csv file. 
