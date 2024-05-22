@@ -1,10 +1,10 @@
 Trip Day,Category,Budget
-1.0,Attraction,76.0
-1.0,Restaurant,48.72
-2.0,Attraction,30.0
-2.0,Restaurant,48.72
-3.0,Attraction,113.0
-3.0,Restaurant,48.72
-1.0,Transportation,7.8
-2.0,Transportation,7.8
-3.0,Transportation,7.8
+1,Food,132.44
+1,Activities,53.0
+2,Food,132.44
+2,Activities,81.0
+3,Food,132.44
+3,Activities,150.0
+1,Transportation,100.0
+2,Transportation,100.0
+3,Transportation,100.0
