@@ -2,6 +2,13 @@
 
 All notable changes to TripTrek will be documented in this file.
 
+## [1.0.2] - 2024-05-22
+### Added
+- Data visualizer for users to analyze their travel patterns and budget usage to optimize future trips.
+
+### Changed 
+- Modified main.py to import data visualizer.
+
 
 ## [1.0.1] - 2024-05-21
 ### Added
