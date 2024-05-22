@@ -34,7 +34,7 @@ _Features to be added only if time allows:_
 2. Make sure you have Python Installed
 3. Download and install required libs and data:
     ```bash
-    pip install requirements.txt
+    pip install -r requirements.txt
     ```
 2. Navigate to the project directory:
    ```bash
