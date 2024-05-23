@@ -32,6 +32,7 @@ def plan_trip(self):
 ```
 
 ### Category Validation Exception
+
 ***Purpose and rationale***: Restrict expense categories to a predefined list to ensure data consistency and prevent errors. We want to ensure expense categories can be matched to budget categories to allow for comparison.
 
 ***Implementation***:

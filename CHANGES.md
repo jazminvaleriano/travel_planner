@@ -5,7 +5,13 @@ All notable changes to TripTrek will be documented in this file.
 ## [1.0.1] - 2024-05-22
 
 ### Added
-- Data visualization option enabled on `data_visualization.py` to generate a timeline and an expense by category graph, for users to analyze travel patterns.
+- Data visualization option enabled on `data_visualization.py` for users to analyze travel expense patterns. The plots added include:
+    - Breakdown of expenses by category. 
+    - Timeline of activities.
+    - Daily spending by category. 
+    - Daily over / under budget. 
+    - Budget vs actual spending 
+    - _Note:_ Some graphs still need adjustments in the previous steps to be optimal e.g. expenses need to be summarized by day/category for the graph to be correctly displayed. 
 - Exceptions to ensure that users can only input cities that are available in the data/restaurants.csv file, and to validate expense categories. 
 - Case-insensitive input handling to improve user experience.
 - Added a column to the budget DataFrame to calculate and display the budget per day, and sum it by category.
