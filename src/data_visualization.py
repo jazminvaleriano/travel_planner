@@ -57,7 +57,7 @@ class DataVisualizer:
             table_data.append([row['trip_day'], row['suggestion']])
         
         # Print the table
-        print(tabulate(table_data, headers=['Day', 'Activity'], tablefmt='fancy_grid'))
+        print(tabulate(table_data, headers=['Day', 'Activity/Restaurant'], tablefmt='fancy_grid'))
 
     def plot_expenses(self, expenses_df):
         # Group expenses by category

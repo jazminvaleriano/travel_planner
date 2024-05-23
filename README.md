@@ -2,8 +2,8 @@
 
 Welcome to the TripTrek project! This repository contains a prototype tool designed to simplify travel planning by generating itineraries, creating a budget and tracking expenses for your next adventure. 
 
-## ⚠️ Important Updates and Instructions (As of May 16th)
-Please note that for the moment we're unable to access real-time data from traveling websites for attractions and restaurants worldwide. Consequently, our datasets are currently limited. When testing the tool, please consider the following:
+## ⚠️ Important Updates and Instructions (As of May 22nd)
+Please note that for the moment we're still unable to access real-time data from traveling websites for attractions and restaurants worldwide. Consequently, our datasets are currently limited. When testing the tool, please consider the following:
 - At this time, TripTrek fully supports Paris, London, and New York only.
 - We recommend keeping your trip length under 4 days. We're actively working on a solution to provide better recommendations for longer trips.
 
@@ -11,6 +11,7 @@ If the instructions and recommendations are followed, TripTrek is able to:
 - Generate a suggested itinerary in .csv for the duration of your trip including attractions, restaurants, and optionally activities added manually by the user, along with costs estimates.
 - Generate a budget csv file organized by category including both data from the suggested itinerary or entered manually by user.
 - Generate an expenses csv file listing the category and expense.
+- Generate plots for data visualization: budget and expenses by category, budget vs actuals, expenses per day/category. 
 
 ## Goal Features
 * **Customizable Itineraries**: Users can specify their destination city, travel preferences and schedule. TripTrek Itinerary Generator will organize your activities efficiently, and estimate your trip costs, maximizing your time and enjoyment.
