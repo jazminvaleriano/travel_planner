@@ -1,7 +1,10 @@
 Trip Day,Category,Amount
-1.0,Activities,34.0
-3.0,Food,12.0
-4.0,Others,23.0
-2.0,Food,10.0
-3.0,Food,10.0
-1.0,Food,19.0
+1.0,Transport,3.0
+2.0,Transport,4.0
+3.0,Transport,5.0
+1.0,Food,10.0
+2.0,Food,20.0
+3.0,Food,30.0
+1.0,Activities,100.0
+2.0,Activities,50.0
+3.0,Activities,150.0   

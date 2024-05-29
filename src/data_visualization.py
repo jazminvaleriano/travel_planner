@@ -82,15 +82,33 @@ class DataVisualizer:
 
     def plot_budget_vs_actual(self, expenses_df, budget_df):
         # Merge expenses with budget
-        comparison_df = pd.merge(expenses_df, budget_df, on=['Trip Day', 'Category'], how='outer').fillna(0)
+        comparison_df = pd.merge(budget_df, expenses_df, on=['Trip Day', 'Category'], how='left').fillna(0)
         comparison_df['Over_Under'] = comparison_df['Budget'] - comparison_df['Amount']
         
-        # Plot
-        sns.catplot(x='Trip Day', y='Amount', hue='Category', data=comparison_df, kind='bar', height=6, aspect=2)
+        # Plot budget and actual spending
+        plt.figure(figsize=(12, 6))
+        sns.barplot(x='Trip Day', y='Amount', hue='Category', data=comparison_df, ci=None, palette='muted', edgecolor='w')
+        sns.lineplot(x='Trip Day', y='Budget', data=comparison_df, color='blue', label='Budget')
         plt.title('Budget vs Actual Spending by Category')
+        plt.xlabel('Trip Day')
+        plt.ylabel('Amount')
+        plt.legend()
         plt.show()
 
-
     def plot_daily_over_under_budget(self, expenses_df, budget_df):
-        # Merge and calculate over/under
-        df = pd.merge(expenses_df, budget_df, on=['Trip Day', 'Category'], how='outer')
+        # Merge expenses with budget
+        comparison_df = pd.merge(budget_df, expenses_df, on=['Trip Day', 'Category'], how='left').fillna(0)
+        comparison_df['Over_Under'] = comparison_df['Budget'] - comparison_df['Amount']
+        
+        # Calculate daily over/under budget
+        daily_over_under = comparison_df.groupby('Trip Day')['Over_Under'].sum().reset_index()
+        
+        # Plot daily over/under budget
+        plt.figure(figsize=(10, 6))
+        sns.barplot(x='Trip Day', y='Over_Under', data=daily_over_under, palette='coolwarm')
+        plt.axhline(0, color='red', linestyle='--')
+        plt.title('Daily Over/Under Budget')
+        plt.xlabel('Trip Day')
+        plt.ylabel('Over/Under Budget')
+        plt.show()
+

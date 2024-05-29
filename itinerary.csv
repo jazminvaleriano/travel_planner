@@ -1,14 +1,14 @@
 trip_day,category,suggestion,location,price_range,rating,estimated_cost
-1,Attraction,Hyde Park,"{'latitude': 51.5073, 'longitude': -0.1657}",$,4.7,15.0
-1,Attraction,Trafalgar Square,"{'latitude': 51.508, 'longitude': -0.1281}",$$,4.7,38.0
-1,Restaurant,The British Roast Co.,"{'latitude': 51.5159, 'longitude': -0.1325}",$,4.3,18.92
-1,Restaurant,The Tea Room,"{'latitude': 51.5194, 'longitude': -0.1391}",$,4.2,18.92
-2,Attraction,National Gallery,"{'latitude': 51.5089, 'longitude': -0.1283}",$$,4.7,38.0
-2,Attraction,British Museum,"{'latitude': 51.5194, 'longitude': -0.127}",$$,4.7,38.0
-2,Restaurant,The Fry-Up Spot,"{'latitude': 51.5205, 'longitude': -0.1413}",$,4.3,18.92
-2,Restaurant,Black Axe Mangal,"{'latitude': 51.5486, 'longitude': -0.0766}",$,4.1,18.92
-3,Attraction,Windsor Castle,"{'latitude': 51.4839, 'longitude': -0.6043}",$$$,4.7,75.0
-3,Attraction,Westminster Abbey,"{'latitude': 51.4994, 'longitude': -0.1273}",$$$,4.7,75.0
-3,Restaurant,The Pie & Mash Shop,"{'latitude': 51.5118, 'longitude': -0.1314}",$,4.2,18.92
-3,Restaurant,Duck & Waffle,"{'latitude': 51.5163, 'longitude': -0.0802}",$,4.1,18.92
-4,custom_activity,Actividad 1,,,,23
+1,Attraction,Seine River Cruise,"{'latitude': 48.8584, 'longitude': 2.3526}",$$,4.8,38.0
+1,Attraction,Île de la Cité,"{'latitude': 48.8556, 'longitude': 2.3458}",$$,4.7,38.0
+1,Restaurant,Septime,"{'latitude': 48.8523, 'longitude': 2.3783}",$$,4.6,24.36
+1,Restaurant,Le P'tit Bouchon,"{'latitude': 48.8597, 'longitude': 2.3445}",$$,4.5,24.36
+2,Attraction,Luxembourg Gardens,"{'latitude': 48.8462, 'longitude': 2.3372}",$,4.7,15.0
+2,Attraction,Sainte-Chapelle,"{'latitude': 48.8556, 'longitude': 2.3458}",$,4.7,15.0
+2,Restaurant,La Table Provençale,"{'latitude': 48.8563, 'longitude': 2.3417}",$$,4.6,24.36
+2,Restaurant,Le Gourmet Gourmand,"{'latitude': 48.8741, 'longitude': 2.3665}",$$,4.5,24.36
+3,custom_activity,Walk along Champs Elysees,,,,0
+3,Attraction,Musée du Louvre,"{'latitude': 48.8606, 'longitude': 2.3376}",$$,4.7,38.0
+3,Attraction,Grand Palais,"{'latitude': 48.8661, 'longitude': 2.3126}",$$$,4.7,75.0
+3,Restaurant,Le Chat Noir,"{'latitude': 48.8606, 'longitude': 2.3429}",$$,4.6,24.36
+3,Restaurant,Le Coq Rouge,"{'latitude': 48.8712, 'longitude': 2.3498}",$$,4.5,24.36
